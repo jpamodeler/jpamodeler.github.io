@@ -811,12 +811,13 @@ ul.sub-menu {
 }
 
 body .preloader {
+  background: url(../images/home/slider-bg.png) 0 100% repeat-x;
   position: absolute;
-  left: 0;
-  top: 0;
-  bottom: -30px;
-  right: 0;
-  background: #fafafa;
+  left: 43%;
+  top: -75px;
+  bottom: 0px;
+  right: -20px;
+  background-color: rgb(255, 255, 255);
   text-align: center;
 }
 

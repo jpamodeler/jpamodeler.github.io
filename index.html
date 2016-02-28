@@ -90,6 +90,7 @@
                             </p>
                             <a href="http://plugins.netbeans.org/download/plugin/4315" class="btn btn-common">Download</a>
                         </div>
+
                         <img src="images/modeler/slider/desktop.png" class="slider-monitor" alt="slider image">
                         <div id="playerContainer" class="slider-screen">
                             <img id="playerThumb" onclick="startVideoEvent();"
@@ -105,11 +106,12 @@
                         <p class="slider-hp-text"><span>Higher</span><span>Productivity</span></p>
                         <img src="images/modeler/slider/fd.png" class="slider-fd" alt="slider image">
                         <p class="slider-fd-text"><span>Fast</span><span>Development</span></p>
+                        <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
+
                     </div>
                 </div>
             </div>
         </section>
-        <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
 
         <!--/#home-slider-->
         <br/><br/>
@@ -331,69 +333,69 @@
         <script type="text/javascript" src="js/main.js"></script>   
     </body>
     <script>
-                                        var playerObj;
+                                            var playerObj;
 
-                                        $(document).ready(function () {
-                                            // 2. This code loads the IFrame Player API code asynchronously.
-                                            var tag = document.createElement('script');
+                                            $(document).ready(function () {
+                                                // 2. This code loads the IFrame Player API code asynchronously.
+                                                var tag = document.createElement('script');
 
-                                            tag.src = "https://www.youtube.com/iframe_api";
-                                            var firstScriptTag = document.getElementsByTagName('script')[0];
-                                            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-                                        });
+                                                tag.src = "https://www.youtube.com/iframe_api";
+                                                var firstScriptTag = document.getElementsByTagName('script')[0];
+                                                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                                            });
 
-                                        // 3. This function creates an <iframe> (and YouTube player)
-                                        //    after the API code downloads.
-                                        function onYouTubeIframeAPIReady() {
-                                            playerObj = new YT.Player('player', {
-                                                height: '312',
-                                                width: '541',
-                                                videoId: 'DDMOaTYuhNo',
+                                            // 3. This function creates an <iframe> (and YouTube player)
+                                            //    after the API code downloads.
+                                            function onYouTubeIframeAPIReady() {
+                                                playerObj = new YT.Player('player', {
+                                                    height: '312',
+                                                    width: '541',
+                                                    videoId: 'DDMOaTYuhNo',
 //          'startSeconds': 11,
 //               'suggestedQuality': 'large',
-                                                playerVars: {'controls': 0, 'showinfo': 0, 'start': 12, 'end': 120},
-                                                events: {
-                                                    'onReady': onPlayerReady,
-                                                    'onStateChange': onPlayerStateChange
-                                                }
-                                            });
-                                        }
+                                                    playerVars: {'controls': 0, 'showinfo': 0, 'start': 12, 'end': 120},
+                                                    events: {
+                                                        'onReady': onPlayerReady,
+                                                        'onStateChange': onPlayerStateChange
+                                                    }
+                                                });
+                                            }
 
-                                        // 4. The API will call this function when the video player is ready.
-                                        function onPlayerReady(event) {
+                                            // 4. The API will call this function when the video player is ready.
+                                            function onPlayerReady(event) {
 //        event.target.playVideo();
-                                        }
+                                            }
 
-                                        // 5. The API calls this function when the player's state changes.
-                                        //    The function indicates that when playing a video (state=1),
-                                        //    the player should play for six seconds and then stop.
-                                        var done = false;
-                                        function onPlayerStateChange(event) {
+                                            // 5. The API calls this function when the player's state changes.
+                                            //    The function indicates that when playing a video (state=1),
+                                            //    the player should play for six seconds and then stop.
+                                            var done = false;
+                                            function onPlayerStateChange(event) {
 //        if (event.data == YT.PlayerState.PLAYING && !done) {
 //          setTimeout(stopVideo, 6000);
 //          done = true;
 //        }
-                                        }
+                                            }
 
 
 
-                                        function startVideoEvent() {
-                                            thevid = document.getElementById('player');
-                                            thevid.style.display = 'block';
-                                            document.getElementById('playerThumb').style.display = 'none';
-                                            playerObj.playVideo();
-                                            $(".robot_things").animate({
-                                                right: '+=1330px',
-                                                bottom: '+=950px'
+                                            function startVideoEvent() {
+                                                thevid = document.getElementById('player');
+                                                thevid.style.display = 'block';
+                                                document.getElementById('playerThumb').style.display = 'none';
+                                                playerObj.playVideo();
+                                                $(".robot_things").animate({
+                                                    right: '+=1330px',
+                                                    bottom: '+=950px'
 
 //        width:'-=50px',
 //        height:'-=150px'
-                                            });
+                                                });
 
-                                        }
-                                        function stopVideo() {
-                                            playerObj.stopVideo();
-                                        }
+                                            }
+                                            function stopVideo() {
+                                                playerObj.stopVideo();
+                                            }
     </script>
 
     <script>
