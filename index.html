@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>JPA Modeler</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/animate.min.css" rel="stylesheet"> 
+        <link href="css/lightbox.css" rel="stylesheet"> 
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/responsive.css" rel="stylesheet">
+
+        <!--[if lt IE 9]>
+                <script src="js/html5shiv.js"></script>
+                <script src="js/respond.min.js"></script>
+        <![endif]-->       
+        <link rel="shortcut icon" href="images/ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    </head><!--/head-->
+
+    <body>
+        <header id="header">      
+
+            <div class="navbar navbar-inverse" role="banner">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <a class="navbar-brand" href="index.html">
+                            <h1><img src="images/logo.png" alt="logo"></h1>
+                        </a>
+
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a target="_blank" href="https://www.youtube.com/JPAModeler">Demos</a></li>
+
+                            <li class="dropdown"><a href="#">Tutorial <i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a target="_blank" href="http://jpamodeler.blogspot.in/2015/12/namedentitygraph.html">Entity Graph</a></li>
+                                    <li><a target="_blank" href="http://jpamodeler.blogspot.in/2015/11/namedstoredprocedurequery.html">Stored Procedure</a></li>
+                                    <li><a target="_blank" href="http://jpamodeler.blogspot.in/2015/11/embeddable.html">Embeddable</a></li>
+                                </ul>
+                            </li>                    
+                            <li class="dropdown"><a href="#">Support <i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a target="_blank" href="https://github.com/jGauravGupta/jpamodeler/issues" target="_blank">Report Issue</a></li>
+                                    <li><a target="_blank" href="https://java.net/bugzilla/buglist.cgi?limit=25&amp;order=changeddate%20DESC%2Cpriority%2Cbug_severity&amp;product=jpamodeler&amp;query_based_on=&amp;query_format=advanced" target="_blank">Previous Issue Tracker</a></li>
+                                    <li><a target="_blank" href="https://java.net/projects/jpamodeler/forums/users-support" target="_blank">User Support</a></li>
+                                    <li><a target="_blank" href="http://jpamodeler.blogspot.in//2015/11/sponsors.html" target="_blank">Sponsor</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown"><a href="#">Developers <i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <!--<li><a target="_blank" href="https://java.net/projects/jpamodeler" target="_blank">Java.net Project</a></li>-->
+                                    <li><a target="_blank" href="https://github.com/jGauravGupta/jpamodeler" target="_blank">Source Code</a></li>
+                                    <li><a target="_blank" href="https://github.com/jGauravGupta/jpamodeler/graphs/contributors" target="_blank">Team</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--/#header-->
+
+        <section id="home-slider">
+            <div class="container">
+                <div class="row">
+                    <div class="main-slider">
+                        <div class="slide-text">
+                            <h1>JPA Modeler</h1>
+                            <p>
+                                JPA Modeler is an open source graphical tool that enhances productivity and simplifies development tasks of creating complex entity relationship models.
+                                Using it developers can create JPA class & Database visually and automates Java code generation. 
+                                The JPA Modeler provides forward & reverse engineering capabilities, import models from ODBC data sources, generate complex SQL/DDL and much more.
+                            </p>
+                            <a href="http://plugins.netbeans.org/download/plugin/4315" class="btn btn-common">Download</a>
+                        </div>
+                        <img src="images/modeler/slider/desktop.png" class="slider-hill" alt="slider image">
+                        <div id="playerContainer" class="slider-house">
+                            <img id="playerThumb" onclick="startVideoEvent();"
+                                 src="images/modeler/slider/netbeans-modeler.png" style="cursor:pointer;width:inherit;height: inherit;" alt="slider image">
+                            <div id="player" style="display:none"></div>
+                        </div>
+                        <!--                        <img src="images/modeler/slider/robot.png" class="slider-sun robot_things" alt="slider image">
+                                                <img src="images/modeler/slider/entity.png" class="slider-entity robot_things" alt="slider image">
+                                                <img src="images/modeler/slider/embeddable.png" class="slider-embeddable robot_things" alt="slider image">
+                                                <img src="images/modeler/slider/mappedsuperclass.png" class="slider-mappedsuperclass robot_things" alt="slider image">
+                                                <img src="images/modeler/slider/table.gif" class="slider-table robot_things" alt="slider image">-->
+                        <img src="images/modeler/slider/hp.png" class="slider-hp" alt="slider image">
+                        <p class="slider-birds1"><span>Higher</span><span>Productivity</span></p>
+                        <img src="images/modeler/slider/fd.png" class="slider-fd" alt="slider image">
+                        <p class="slider-birds2"><span>Fast</span><span>Development</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
+
+        <!--/#home-slider-->
+        <br/><br/>
+        <section id="services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+                        <div class="single-service">
+                            <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                                <img src="images/modeler/feature/VISUAL.png" alt="">
+                            </div>
+                            <h2>Visualize</h2>
+                            <p>
+                                JPA 2.1 classes model <br/>
+                                Database schema model
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="single-service">
+                            <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
+                                <img src="images/modeler/feature/FOR_ENG.png" alt="">
+                            </div>
+                            <h2>Forward Engineering</h2>
+                            <p> JPA 2.1 Source code <br/>
+                                SQL DDL to create a database 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="900ms">
+                        <div class="single-service">
+                            <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="900ms">
+                                <img src="images/modeler/feature/REV_ENG.png" alt="">
+                            </div>
+                            <h2>Reverse engineer</h2>
+                            <p>Existing JPA Source code<br/>
+                                Import database table into entity diagram
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--/#services-->
+
+        <section id="action" class="responsive">
+            <div class="vertical-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="action take-tour">
+                            <div class="col-sm-7 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                                <h1 class="title">Why JPA Modeler ?</h1>
+                                 <div class="row">
+                                <img src="images/modeler/feature/DESIGN.png" style="width: 30px;margin-right:15px" /> Design 
+                                    <img src="images/modeler/feature/NEXT.png" style="margin-right:30px;margin-left:30px" />  
+                                    <img src="images/modeler/feature/GENERATE.png" style="width: 23px;margin-right:15px" /> Generate
+                                     <img src="images/modeler/feature/NEXT.png" style="margin-right:30px;margin-left:30px" /> 
+                                     <img src="images/modeler/feature/RUN.png" style="width: 23px;margin-right:15px" /> Run
+                                </div>
+                            </div>
+                            <div class="col-sm-5 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                                <div class="row">
+                                <div class="tour-button col-sm-6">
+                                    <a href="#" onclick="startVideoEvent();" class="btn btn-common">View Demo</a>
+                                </div>
+                                <div class="col-sm-6" id="rocket_tour"><img src="images/modeler/tour/rocket.png" /></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/#action-->
+
+        <section id="features">
+            <div class="container">
+                <div class="row">
+
+
+
+                    <div class="single-features">
+                        <div class="col-sm-5 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                            <img src="images\modeler\feature\E2D.png" class="img-responsive" alt="">
+                        </div>
+                        <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                            <h2>Visualize architecture</h2>
+                            <P>
+                                JPA Modeler helps you visualize and design application architecture for rapid change, continuous improvement, sustainability and
+                                freeing you from the mundane task of writing code so you can concentrate on the business logic and overall architecture of your project
+                            </P>
+                        </div>
+                    </div>
+                    <div class="single-features">
+                        <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                            <h2>JPA 2.1 source generation</h2>
+                            <P>
+                                Take advantage of the source code generated by JPA Modeler to accelerate the implementation phase of your project and
+                                eliminate the unintended errors that can creep into manually written code and prove time-consuming to debug later on.  
+                            </P>
+                        </div>
+                        <div class="col-sm-5 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                            <img src="images\modeler\feature\E2J.png" class="img-responsive" alt="">
+                        </div>
+
+                    </div>
+                    <div class="single-features">
+                        <div class="col-sm-5 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                            <img src="images\modeler\feature\J2E.png" class="img-responsive" alt="">
+                        </div>
+                        <div class="col-sm-6 col-sm-offset-1 align-right wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                            <h2>Reverse Engineering of Java Source Code</h2>
+                            <P>JPA Modeler supports reverse engineering by importing existing source code and create new ER diagrams. 
+                                Visualize JPA classes & database models so you can see how elements such as attributes, 
+                                relationships and other objects relate to each other without showing actual data.
+                                The built-in source code editor lets you quickly navigate from model directly to source code in the same environment.
+                            </P>
+                        </div>
+
+                    </div>
+
+                    <div class="single-features">
+
+                        <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                            <h2>Visual creation of database structures</h2>
+                            <P>
+                                Database design is one of the key features of JPA Modeler. It suppots automatic conversion of JoinColumn to JoinTable (vice-versa).<br/>
+                                JPA Modeler helps to create, modify, and design your models without the need to write complex SQL to create and edit objects, 
+                                you’ll know exactly what you are working on. You can develop a complete database schema with just a few clicks.
+                            </P>
+                        </div>
+                        <div class="col-sm-5 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                            <img src="images\modeler\feature\D2V.png" class="img-responsive" alt="">
+                        </div>
+                    </div>
+                    <div class="single-features">
+                        <div class="col-sm-5 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                            <img src="images\modeler\feature\S2D.png" class="img-responsive" alt="">
+                        </div>
+                        <div class="col-sm-6 col-sm-offset-1 align-right wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                            <h2>DB Reverse Engineering</h2>
+                            <P>
+                                Working with legacy database becomes even more challenging when the documentation has been lost in time.
+                                Make it available again by importing the existing database and create new ER diagram. 
+                                Visually study the table structures and their relationships.</P>
+                        </div>
+
+                    </div>
+
+
+                    <div class="single-features">
+
+                        <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                            <h2>SQL/DDL script generation</h2>
+                            <P>
+                                JPA Modeler is not only a tool for creating ER diagrams and designing your databases. 
+                                The tool gives you the opportunity to generate complex SQL/DDL script for all supported database platforms, potentially saving you hundreds of hours of work.
+                                It supports different databases : MySQL, Sybase, Oracle, SQL Server, PostgreSQL, Microsoft Access, H2 and Apache Derby etc.
+                            </P>
+                        </div>
+                        <div class="col-sm-5 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                            <img src="images\modeler\feature\D2S.png" class="img-responsive" alt="">
+                        </div>
+                    </div>
+
+                    <div class="single-features">
+                        <div class="col-sm-5 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                            <img src="images\modeler\feature\Export.png" class="img-responsive" alt="">
+                        </div>
+                        <div class="col-sm-6 col-sm-offset-1 align-right wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                            <h2>Model documentation</h2>
+                            <P>JPA Modeler can generate class model and db diagram in PPT. 
+                                The diagram of a model can be exported as an image in JPG or PNG format.</P>
+                        </div>
+
+                    </div>
+
+                    <div class="single-features">
+
+                        <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                            <h2>Improve your productivity</h2>
+                            <P>
+                                Reduce faults in development <br/>
+                                Visualize JPA Model & database structures and get better understanding<br/>
+                                Find errors in your model<br/>
+                                Maintain your product architecture<br/>
+                                Create databases faster
+                            </P>
+                        </div>
+                        <div class="col-sm-5 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                            <img src="images\modeler\feature\Productivity.png" class="img-responsive" alt="" style="margin: auto;">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--/#features-->
+   <footer id="footer">
+        <div class="container">
+            <div class="row">
+<!--                <div class="col-sm-12 text-center bottom-separator">
+                    <img src="images/home/under.png" class="img-responsive inline" alt="">
+                </div>-->
+<!--                <div class="col-md-4 col-sm-6">
+                    <div class="testimonial bottom">
+                        <h2>Testimonial</h2>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#"><img src="images/home/profile1.png" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <blockquote>Nisi commodo bresaola, leberkas venison eiusmod bacon occaecat labore tail.</blockquote>
+                                <h3><a href="#">- Jhon Kalis</a></h3>
+                            </div>
+                         </div>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#"><img src="images/home/profile2.png" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <blockquote>Capicola nisi flank sed minim sunt aliqua rump pancetta leberkas venison eiusmod.</blockquote>
+                                <h3><a href="">- Abraham Josef</a></h3>
+                            </div>
+                        </div>   
+                    </div> 
+                </div>-->
+
+<!--                <div class="col-md-4 col-sm-12">
+                    <div class="contact-form bottom">
+                        <h2>Send a message</h2>
+                        <form id="main-contact-form" name="contact-form" method="post" action="sendemail.php">
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-control" required="required" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control" required="required" placeholder="Email Id">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Your text here"></textarea>
+                            </div>                        
+                            <div class="form-group">
+                                <input type="submit" name="submit" class="btn btn-submit" value="Submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>-->
+                <div class="col-sm-12">
+                    <div class="copyright-text text-center">
+                        <p>&copy; 2016 JPA Modeler</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--/#footer-->
+
+
+
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/lightbox.min.js"></script>
+        <script type="text/javascript" src="js/wow.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>   
+    </body>
+    <script>
+                                var playerObj;
+
+                                $(document).ready(function () {
+                                    // 2. This code loads the IFrame Player API code asynchronously.
+                                    var tag = document.createElement('script');
+
+                                    tag.src = "https://www.youtube.com/iframe_api";
+                                    var firstScriptTag = document.getElementsByTagName('script')[0];
+                                    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                                });
+
+                                // 3. This function creates an <iframe> (and YouTube player)
+                                //    after the API code downloads.
+                                function onYouTubeIframeAPIReady() {
+                                    playerObj = new YT.Player('player', {
+                                        height: '312',
+                                        width: '541',
+                                        videoId: 'DDMOaTYuhNo',
+//          'startSeconds': 11,
+//               'suggestedQuality': 'large',
+                                        playerVars: {'controls': 0, 'showinfo': 0, 'start': 12, 'end': 120},
+                                        events: {
+                                            'onReady': onPlayerReady,
+                                            'onStateChange': onPlayerStateChange
+                                        }
+                                    });
+                                }
+
+                                // 4. The API will call this function when the video player is ready.
+                                function onPlayerReady(event) {
+//        event.target.playVideo();
+                                }
+
+                                // 5. The API calls this function when the player's state changes.
+                                //    The function indicates that when playing a video (state=1),
+                                //    the player should play for six seconds and then stop.
+                                var done = false;
+                                function onPlayerStateChange(event) {
+//        if (event.data == YT.PlayerState.PLAYING && !done) {
+//          setTimeout(stopVideo, 6000);
+//          done = true;
+//        }
+                                }
+
+
+
+                                function startVideoEvent() {
+                                    thevid = document.getElementById('player');
+                                    thevid.style.display = 'block'; 
+                                    document.getElementById('playerThumb').style.display = 'none';
+                                    playerObj.playVideo();
+                                    $(".robot_things").animate({
+                                        right: '+=1330px',
+                                        bottom: '+=950px'
+
+//        width:'-=50px',
+//        height:'-=150px'
+                                    });
+
+                                }
+                                function stopVideo() {
+                                    playerObj.stopVideo();
+                                }
+    </script>
+
+</html>
