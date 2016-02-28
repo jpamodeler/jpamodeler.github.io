@@ -97,11 +97,11 @@
     margin-top: 0;
   }
 
-  #home-slider .slider-hill {
+  #home-slider .slider-monitor {
     width: 400px;
   }
 
-  #home-slider .slider-house {
+  #home-slider .slider-screen {
 /*    width: 250px;
     right: 90px;
     bottom: -20px;*/
@@ -114,7 +114,7 @@
     width: 60px
   }
 
-  #home-slider .slider-birds1 {
+  #home-slider .slider-hp-text {
     right: 390px;
     bottom: 290px;
     width: 70px;
@@ -125,7 +125,7 @@
     /* width: 70px; */
   }
 
-  #home-slider .slider-birds2 {
+  #home-slider .slider-fd-text {
     right: -24px;
     bottom: 300px;
     width: 80px;
@@ -298,12 +298,12 @@
   }
 
 
-  #home-slider .slider-hill {
+  #home-slider .slider-monitor {
     right: 50%;
     margin-right: -200px;
   }
 
-  #home-slider .slider-house {
+  #home-slider .slider-screen {
     right: 50%;
     /* right: 39%; */
     margin-right: -179px;
@@ -314,7 +314,7 @@
     margin-right: 60px;
   }
 
-  #home-slider .slider-birds1 {
+  #home-slider .slider-hp-text {
     width: 70px;
     right: 62%;
     margin-right: 98px;
@@ -327,7 +327,7 @@
   margin-right: -70px;
 }
 
-  #home-slider .slider-birds2 {
+  #home-slider .slider-fd-text {
     width: 70px;
     right: 46%;
     margin-right: -132px;
@@ -667,13 +667,13 @@
     font-size: 10px;
     padding: 12px 11px;
   }
-    #home-slider .slider-house {
+    #home-slider .slider-screen {
     right: 50%;
     /* right: 30%; */
     margin-right: -178px;
     /* margin: auto; */
   }
-    #home-slider .slider-birds1 {
+    #home-slider .slider-hp-text {
     width: 70px;
     right: 62%;
     margin-right: 99px;
@@ -686,7 +686,7 @@
   margin-right: -75px;
 }
 
-  #home-slider .slider-birds2 {
+  #home-slider .slider-fd-text {
     width: 70px;
     right: 46%;
     margin-right: -132px;

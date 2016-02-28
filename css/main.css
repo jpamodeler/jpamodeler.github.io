@@ -563,26 +563,26 @@ ul.sub-menu {
   animation: fadeInLeftBig 700ms cubic-bezier(0.190,1.000,0.220,1.000) 200ms both;
 }
 
-#home-slider .slider-hill {
+#home-slider .slider-monitor {
   position: absolute;
   right: 0;
   bottom: 0;
 }
 
-.animate-in .slider-hill {
+.animate-in .slider-monitor {
   -webkit-animation: bounceInDown 1000ms ease-in-out 200ms both;
   animation: bounceInDown 1000ms ease-in-out 200ms both;
 }
 
-#home-slider .slider-house {
+#home-slider .slider-screen {
   position: absolute;
   /*  right: 110px;
   bottom: -30px;*/
   right: 33px;
-  bottom: 137px;
+  bottom: 131px;
 }
 
-.animate-in .slider-house {
+.animate-in .slider-screen {
   -webkit-animation: bounceInDown 500ms ease-in-out 800ms both;
   animation: bounceInDown 500ms ease-in-out 800ms both;
 }
@@ -606,12 +606,12 @@ ul.sub-menu {
   right: 587px;
   bottom: 432px;
 }
-#home-slider .slider-birds1 {
+#home-slider .slider-hp-text {
   position: absolute;
   right: 562px;
   bottom: 454px;
 }
-#home-slider .slider-birds1 span 
+#home-slider .slider-hp-text span 
 {
     display: block;
     font-family: Rockwell, Georgia, "Times New Roman", Times, serif;
@@ -623,7 +623,7 @@ ul.sub-menu {
   -webkit-animation: fadeInLeftTitle 500ms ease-in-out 1200ms both;
   animation: fadeInLeftTitle 500ms ease-in-out 1200ms both;
 }
-.animate-in .slider-birds1 {
+.animate-in .slider-hp-text {
   -webkit-animation: fadeInLeftTitle 500ms ease-in-out 1200ms both;
   animation: fadeInLeftTitle 500ms ease-in-out 1200ms both;
 }
@@ -649,14 +649,14 @@ ul.sub-menu {
   bottom: 460px;
 }
 
-#home-slider .slider-birds2 {
+#home-slider .slider-fd-text {
   position: absolute;
   /*  right: 40px;
   bottom: 150px;*/
   right: -20px;
   bottom: 462px;
 }
-#home-slider .slider-birds2 span 
+#home-slider .slider-fd-text span 
 {
     display: block;
     font-family: Rockwell, Georgia, "Times New Roman", Times, serif;
@@ -668,7 +668,7 @@ ul.sub-menu {
   -webkit-animation: fadeInRightTitle 500ms ease-in-out 1200ms both;
   animation: fadeInRightTitle 500ms ease-in-out 1200ms both;
 }
-.animate-in .slider-birds2 {
+.animate-in .slider-fd-text {
   -webkit-animation: fadeInRightTitle 500ms ease-in-out 1200ms both;
   animation: fadeInRightTitle 500ms ease-in-out 1200ms both;
 }
