@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
+        <meta name="description" content="JPA Modeler">
+        <meta name="author" content="Gaurav Gupta">
         <title>JPA Modeler</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -88,11 +88,11 @@
                                 Using it developers can create JPA class & Database visually and automates Java code generation. 
                                 The JPA Modeler provides forward & reverse engineering capabilities, import models from ODBC data sources, generate complex SQL/DDL and much more.
                             </p>
-                            <a href="http://plugins.netbeans.org/download/plugin/4315" class="btn btn-common">Download</a>
+                            <a href="http://plugins.netbeans.org/download/plugin/4583" class="btn btn-common">Download</a>
                         </div>
 
-                        <img src="images/modeler/slider/desktop.png" class="slider-monitor" alt="slider image">
-                        <div id="playerContainer" class="slider-screen">
+                        <img src="images/modeler/slider/desktop.png" class="slider-grp slider-monitor" alt="slider image">
+                        <div id="playerContainer" class="slider-grp  slider-screen">
                             <img id="playerThumb" onclick="startVideoEvent();"
                                  src="images/modeler/slider/netbeans-modeler.png" style="cursor:pointer;width:inherit;height: inherit;" alt="slider image">
                             <div id="player" style="display:none"></div>
@@ -102,11 +102,11 @@
                                                 <img src="images/modeler/slider/embeddable.png" class="slider-embeddable robot_things" alt="slider image">
                                                 <img src="images/modeler/slider/mappedsuperclass.png" class="slider-mappedsuperclass robot_things" alt="slider image">
                                                 <img src="images/modeler/slider/table.gif" class="slider-table robot_things" alt="slider image">-->
-                        <img src="images/modeler/slider/hp.png" class="slider-hp" alt="slider image">
-                        <p class="slider-hp-text"><span>Higher</span><span>Productivity</span></p>
-                        <img src="images/modeler/slider/fd.png" class="slider-fd" alt="slider image">
-                        <p class="slider-fd-text"><span>Fast</span><span>Development</span></p>
-                        <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
+                        <img src="images/modeler/slider/hp.png" class="slider-grp slider-hp" alt="slider image">
+                        <p class="slider-grp slider-hp-text"><span>Higher</span><span>Productivity</span></p>
+                        <img src="images/modeler/slider/fd.png" class="slider-grp slider-fd" alt="slider image">
+                        <p class="slider-grp slider-fd-text"><span>Fast</span><span>Development</span></p>
+                        <div class="slider-grp preloader"><i class="fa fa-sun-o fa-spin"></i></div>
 
                     </div>
                 </div>
@@ -165,15 +165,27 @@
                         <div class="action take-tour">
                             <div class="col-sm-8 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms" style="margin-top: 20px;">
                                 <h1 class="title">Why JPA Modeler ?</h1>
+                                
                                 <div class="row">
-                                    <img src="images/modeler/feature/DESIGN.png" style="width: 30px;margin-right:15px" /> Design 
-                                    <img src="images/modeler/feature/NEXT.png" style="margin-right:30px;margin-left:30px" />  
-                                    <img src="images/modeler/feature/GENERATE.png" style="width: 23px;margin-right:15px" /> Generate
-                                    <img src="images/modeler/feature/NEXT.png" style="margin-right:30px;margin-left:30px" /> 
-                                    <img src="images/modeler/feature/RUN.png" style="width: 23px;margin-right:15px" /> Run
+                                    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                                        <img src="images/modeler/feature/DESIGN.png" style="width: 30px;margin-right:15px" /> Design 
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                        <img src="images/modeler/feature/NEXT.png" style="margin-right:30px;margin-left:30px" />  
+                                    </div>
+                                    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                                        <img src="images/modeler/feature/GENERATE.png" style="width: 23px;margin-right:15px" /> Generate
+                                    </div>
+                                     <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                        <img src="images/modeler/feature/NEXT.png" style="margin-right:30px;margin-left:30px" /> 
+                                    </div>
+                                    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">    
+                                        <img src="images/modeler/feature/RUN.png" style="width: 23px;margin-right:15px" /> Run
+                                    </div>
+
                                 </div>
                             </div>
-                            <div class="col-sm-4 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                            <div id="DEMO_CONTAINER" class="col-sm-4 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
                                 <div class="row">
                                     <div class="tour-button col-sm-6">
                                         <a href="#" onclick="startVideoEvent();" class="btn btn-common">View Demo</a>
@@ -316,7 +328,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="copyright-text text-center">
-                            <p>&copy; 2016 JPA Modeler</p>
+                            <p>&copy; 2012-2016 JPA Modeler</p>
                         </div>
                     </div>
                 </div>
