@@ -2910,3 +2910,9 @@ span.stButton_gradient,
     float: none;
     margin: 0 auto;
 }
+
+/*Custom**/
+
+.take-tour .wow .row div {    
+    padding-right:0% !important;
+    padding-left: 5% !important;}
