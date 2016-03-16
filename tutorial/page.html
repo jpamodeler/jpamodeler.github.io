@@ -122,6 +122,7 @@
             
             $.ajax({
     url: link + ".html",
+    dataType : "html",
     success: function(content) {
         $('#LOAD').html(content);
     }
