@@ -398,4 +398,6 @@ width: 32px;
 height: 32px;
 font-weight: bold;
 }
-        
+        #LOAD h3 {
+    padding-top: 25px;
+}
