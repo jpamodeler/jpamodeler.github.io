@@ -121,7 +121,7 @@
             // $("#LOAD iframe").attr("src",link + ".html")
             $.ajax({
     url: link + ".html",
-    dataType : "script",
+    dataType : "html",
     success: function(content) {
         $('#LOAD').html(content);
     }
