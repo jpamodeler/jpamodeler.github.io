@@ -85,7 +85,7 @@
         <section id="features">
             <div class="container">
                 <div class="row" id="LOAD">
-
+                    <iframe></iframe>
 
 
                 </div>
@@ -119,14 +119,14 @@
         $(document).ready(function () {
             var link = getUrlParameter('l');
             //$("#LOAD").load(link + ".html")
-            
-            $.ajax({
-    url: link + ".html",
-    dataType : "script",
-    success: function(content) {
-        $('#LOAD').html(content);
-    }
-});
+            $("#LOAD iframe").attr("src",link + ".html")
+//             $.ajax({
+//     url: link + ".html",
+//     dataType : "script",
+//     success: function(content) {
+//         $('#LOAD').html(content);
+//     }
+// });
             
             
         });
