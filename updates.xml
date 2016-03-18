@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <!DOCTYPE autoupdate_catalog PUBLIC "-//NetBeans//DTD Autoupdate Catalog 2.0//EN" "autoupdate-catalog-2_0.dtd">
-<module_updates timestamp="00/00/00/17/03/2016">
-    <module releasedate="2016/03/17" distribution="http://plugins.netbeans.org/download/plugin/4608" 
+<module_updates timestamp="00/00/00/13/03/2016">
+    <module releasedate="2016/03/13" distribution="http://plugins.netbeans.org/download/plugin/4608" 
             homepage="http://jpamodeler.github.io" moduleauthor="Gaurav Gupta" codenamebase="org.netbeans.jpa.modeler">
         <manifest OpenIDE-Module-Specification-Version="1.3" AutoUpdate-Show-In-Client="true" 
                   OpenIDE-Module="org.netbeans.jpa.modeler" OpenIDE-Module-Name="JPA Modeler" OpenIDE-Module-Display-Category="Enterprise Applications" />
