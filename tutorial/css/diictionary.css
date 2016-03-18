@@ -1,0 +1,37 @@
+entity {
+    background: url("../Icons/class/ENTITY.png") no-repeat;
+    padding: 2px 12px 2px 12px;
+}
+
+embeddable {
+    background: url("../Icons/class/EMBEDDABLE.png") no-repeat;
+    padding: 2px 12px 2px 32px;
+}
+
+add-attr {
+      background: url("../Icons/button/add-element.png") no-repeat;
+    padding: 2px 12px 2px 18px;  
+}
+basic {
+    background: url("../Icons/attribute/basic-attribute.png") no-repeat;
+    padding: 2px 12px 2px 8px;
+}
+id {
+    background: url("../Icons/attribute/id-attribute.png") no-repeat;
+    padding: 2px 12px 2px 8px;
+}
+
+basic-element-collection {
+    background: url("../Icons/attribute/basic-collection-attribute.png") no-repeat;
+    padding: 2px 12px 2px 22px;
+}
+
+embedded {
+    background: url("../Icons/attribute/single-value-embedded.gif") no-repeat;
+    padding: 2px 12px 2px 22px;
+}
+
+add-composition {
+    background: url("../Icons/button/composition.png") no-repeat;
+    padding: 2px 12px 2px 22px;
+}

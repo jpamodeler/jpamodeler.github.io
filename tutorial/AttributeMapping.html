@@ -1,0 +1,280 @@
+<h3>Attribute Mapping</h3>
+<h5 id="TOC" style="text-align: left;">Table of Content :</h5>
+<ul style="text-align: left;">
+    <li><a href="#IDM">ID mapping</a></li>
+    <li><a href="#BM">Basic mapping</a></li>
+    <li><a href="#ECM">Element collection mapping</a></li>
+    <li><a href="#EM">Embedded mapping</a></li>
+    <!--<li><a href="#BM">Embedded ID mapping</a></li>-->
+    <li><a href="#VM">Version mapping</a></li>
+    <li><a href="#BM">Transient mapping</a></li>
+</ul>
+
+JPA Modeler supports the following mapping types for Java persistent entities:
+
+<h3 id="IDM">ID Mapping :</h3>
+Use an ID Mapping to specify the primary key of an entity. 
+ID mappings may be used with a Entity or Mapped superclass. 
+
+<blockquote>The primary key must be defined on the entity class that is the root of the entity hierarchy or on a
+    mapped superclass that is a (direct or indirect) superclass of all entity classes in the entity hierarchy.
+    The primary key must be defined exactly once in an entity hierarchy.
+</blockquote>
+
+
+<h6>To create a ID mapping:</h6>
+<ul>
+<li>
+Click on the Entity <entity/>, then click on the expand <add-attr/> button > ID <id/> property.
+</li>
+<li>
+    Double click on the attribute to rename it.
+</li>
+<li>
+    To change field type, goto property panel > Field Type > Click to open Field Type panel :
+
+
+    ID mappings may be used only with the following attribute types:
+    <ul>
+        <li>Java primitive types and wrappers of the primitive types</li>
+        <li>java.lang.String, java.math.BigInteger, java.math.BigDecimal</li>
+        <li>java.util.Date</li>
+        <li>java.sql.Date</li>
+    </ul>
+</li>
+</ul>
+
+
+
+<h3 id="BM">Basic Mapping :</h3>
+
+Use a Basic Mapping to map an attribute directly to a database column. 
+
+<h6>To create a basic mapping:</h6>
+<ul>
+<li>
+    Click on the Entity <entity/>, then click on the expand <add-attr/> button > basic <basic/> property.
+</li>
+<li>
+    Double click on the attribute to rename it.
+</li>
+<li>
+    To change field type, goto property panel > Field Type > Click to open Field Type panel :
+
+    Basic mappings may be used only with the following attribute types:
+    <ul>
+        <li>Java primitive types and wrappers of the primitive types</li>
+        <li>java.lang.String, java.math.BigInteger, java.math.BigDecimal</li>
+        <li>java.util.Date, java.util.Calendar</li>
+        <li>java.sql.Date, java.sql.Time, java.sql.Timestamp</li>
+        <li>byte[], Byte[], char[], Character[]</li>
+        <li>enums</li>
+        <li>any other type that implements Serializable</li>
+    </ul>
+
+</li>
+</ul>
+
+<h3 id="ECM">Element collection mapping (Basic) :</h3>
+Use an <b>Element Collection</b> to define a collection of <b>Basic</b> objects. The Basic values are
+stored in a separate collection table. Because the target is a Basic value (instead of an
+Entity), you can easily define collections of simple values without having to define a
+class for the value.
+
+<h6>To create a Element Collection :</h6>
+<ul>
+<li>
+    Click on the Entity <entity/>, then click on the expand <add-attr/> button > Basic Element Collection <basic-element-collection/> property.
+</li>
+<li>
+    Double click on the attribute to rename it.
+</li>
+<li>
+    To change collection type, goto property panel > Collection Type :
+
+</li>
+<li>
+    To change field type, goto property panel > Field Type > Click to open Field Type panel :
+
+</li>
+</ul>
+
+
+<h3 id="EM">Embedded mapping :</h3>
+Use an Embedded Mapping to specify a persistent field or property of an entity
+whose value is an instance of an embeddable class.
+
+<h6>To create a Embedded mapping :</h6>
+<ul>
+<li>
+    Click on the Entity <entity/>, then click on the composition <add-composition/> button .
+</li>
+<li>
+    Now, drag embedded <embedded/> attribute to Embeddable <embeddable/> class.
+</li>
+<li>
+    Double click on the attribute to rename it.
+</li>
+</ul>
+
+Please click here for more info : <a href="page.html?l=Embeddable">Embeddable</a>
+
+
+
+
+<h3 id="VM">Version mapping :</h3>
+Use a Version Mapping to specify the field used for optimistic locking. If the entity is
+associated with multiple tables, you should use a version mapping only with the
+primary table. You should have only a single version mapping per persistent entity.
+
+<h6>To create a Version mapping :</h6>
+<ul>
+<li>
+    Click on the Entity <entity/>, then click on the expand <add-attr/> button > basic <basic/> property.
+</li>
+<li>
+    Double click on the attribute to rename it.
+</li>
+<li>
+    To change field type, goto property panel > Field Type > Click to open Field Type panel :
+
+    Basic mappings may be used only with the following attribute types:
+    <ul>
+        <li>Java primitive types and wrappers of the primitive types</li>
+        <li>java.lang.String, java.math.BigInteger, java.math.BigDecimal</li>
+        <li>java.util.Date, java.util.Calendar</li>
+        <li>java.sql.Date, java.sql.Time, java.sql.Timestamp</li>
+        <li>byte[], Byte[], char[], Character[]</li>
+        <li>enums</li>
+        <li>any other type that implements Serializable</li>
+    </ul>
+
+</li>
+</ul>
+
+
+Version mappings may be used only with the following attribute types:
+■ int
+■ Integer
+■ short, Short
+■ long, Long
+■ Timestamp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+To download the JPA Modeler Plugins file for NetBeans go to the following location:
+<a href="http://jpamodeler.github.io/">http://jpamodeler.github.io</a>
+
+<h3 id="IN">
+    Installing JPA Modeler Plugins :</h3>
+To get the plugins ready for installation, start NetBeans as described in <a href="https://netbeans.org/community/releases/81/install.html" target="_blank">"Installing and the Starting the NetBeans IDE."</a>
+
+Start NetBeans and select the "Tools &gt; Plugins" menu item
+
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
+        <tr><td style="text-align: center;"><a href="Installation/1-Browse.PNG" style="margin-left: auto; margin-right: auto;">
+                    <img border="0" src="Installation/1-Browse.PNG" /></a></td></tr>
+        <tr><td class="tr-caption" style="text-align: center;">Browse NBM</td></tr>
+    </tbody></table>
+Be sure to remove any existing installation of the JPA Modeler plugin. Failure to do so will most likely cause installation / execution problems.
+Switch to the "Downloaded" tab and select the "Add Plugins..." button to browse to the downloaded nbm file.
+<div>
+
+</div>
+<div>
+    Once the file has been selected, NetBeans will display module information as follows:
+
+    <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
+            <tr><td style="text-align: center;"><a href="Installation/2-Install.png" style="margin-left: auto; margin-right: auto;"><img border="0" src="Installation/2-Install.png" /></a></td></tr>
+            <tr><td class="tr-caption" style="text-align: center;">click on Install</td></tr>
+        </tbody></table>
+    Now select the "Install" button at the bottom :
+
+    <div class="separator" style="clear: both; text-align: center;">
+        <a href="Installation/3-Start.png" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="Installation/3-Start.png" /></a></div>
+
+
+</div>
+<div>
+    <div>
+        When the NetBeans IDE Installer screen is displayed, click Next.</div>
+    <div>
+        <ul style="text-align: left;">
+            <li>Accept the license terms and click Install.
+                <div class="separator" style="clear: both; text-align: center;">
+                    <a href="Installation/4-License.png" style="margin-left: 1em; margin-right: 1em;">
+                        <img border="0" src="Installation/4-License.png" />
+                    </a></div>
+            </li>
+
+            <li>If additional Validation screens appear, including a confirmation to install an unsigned plugin. Just select "Continue" until you get to the final screen.
+                <div class="separator" style="clear: both; text-align: center;">
+                    <a href="Installation/5-Certificate.png" style="margin-left: 1em; margin-right: 1em;">
+                        <img border="0" src="Installation/5-Certificate.png" />
+                    </a></div>
+            </li>
+        </ul>
+    </div>
+    <div>
+
+
+        The plug-in has now been installed and can be seen in the "Installed" tab:
+
+        <div class="separator" style="clear: both; text-align: center;">
+            <a href="Installation//6-Restart.png" style="margin-left: 1em; margin-right: 1em;">
+                <img border="0" src="Installation//6-Restart.png" /></a></div>
+
+    </div>
+    <div>
+
+    </div>
+    <div>
+        Click Finish to restart NetBeans.&nbsp;</div>
+    <div>
+
+        <div class="separator" style="clear: both; text-align: center;">
+            <a href="Installation/7-Restarting.png" style="margin-left: 1em; margin-right: 1em;">
+                <img border="0" src="Installation/7-Restarting.png" /></a></div>
+
+    </div>
+</div>
+<h3 id="VR">Verifying Your Installation:</h3>
+Once you have installed the JPA Modeler Plugins into NetBeans, its installation can further be confirmed via the <b>"New File &gt; Persistence &gt; JPA Diagram file"</b>; if it shows up, the installation seems to have gone ok:
+
+<div class="separator" style="clear: both; text-align: center;">
+    <a href="Installation/Verify.png" style="margin-left: 1em; margin-right: 1em;">
+        <img border="0" src="Installation/Verify.png" />
+    </a>
+</div>
+
+The JPA Modeler is now ready for you to work with, to create a new project and develop code.
+
+
