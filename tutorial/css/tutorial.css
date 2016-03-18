@@ -129,7 +129,7 @@ pre {
 }
 
 pre,code,tt {
-    font: 13px &#39;andale mono&#39;,&#39;lucida console&#39;,monospace;
+    font: 13px "andale mono","lucida console",monospace;
     line-height: 18px;
 }
 code {
