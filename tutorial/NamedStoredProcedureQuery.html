@@ -18,7 +18,7 @@
 <h3 id="INT" style="text-align: left;">
 Introduction :</h3>
 In this tutorial we will go through the basic execution of stored procedure using JPA Modeler .
-
+<br/>
 <span style="font-family: inherit;">JPA 2.1 supports : </span>
 <ol style="text-align: left;">
 <li><span style="font-family: inherit;">Named stored procedures calls defined in <b>@NamedStoredProcedureQuery</b> annotation and created through <b>EntityManager.createNamedStoredProcedureQuery()</b> .&nbsp;</span></li>
@@ -32,20 +32,21 @@ In this tutorial we will go through the basic execution of stored procedure usin
 <span style="font-family: inherit;">Create the JPA Diagram :</span></h3>
 <ol style="text-align: left;">
 <li style="font-family: inherit;"><span style="font-family: inherit;">Goto File menu &gt; New File &gt; Persistence category</span></li>
-<li style="font-family: inherit;"><span style="font-family: inherit;">From the Persistence , select <b>JPA Diagram from Database</b> ( or create new JPA Diagram ) and click Next.&nbsp;<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="font-family: inherit; margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td><a href="http://1.bp.blogspot.com/-H-PV1_p8q5Y/VlXFO5yDXSI/AAAAAAAAADA/mIKz1kmZdLA/s1600/11.JPG" style="font-family: inherit; margin-left: auto; margin-right: auto;"><img border="0" src="http://1.bp.blogspot.com/-H-PV1_p8q5Y/VlXFO5yDXSI/AAAAAAAAADA/mIKz1kmZdLA/s1600/11.JPG" /></a></td></tr>
+<li style="font-family: inherit;"><span style="font-family: inherit;">From the Persistence , select <b>JPA Diagram from Database</b> ( or create new JPA Diagram ) and click Next.
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="font-family: inherit; margin-left: auto; margin-right: auto; text-align: center;"><tbody>
+<tr><td><a href="NamedStoredProcedureQuery/11.JPG" style="font-family: inherit; margin-left: auto; margin-right: auto;"><img border="0" src="NamedStoredProcedureQuery/11.JPG" /></a></td></tr>
 <tr><td class="tr-caption" style="font-size: 12.8px;"><span style="font-size: x-small; text-align: start;">Select JPA Diagram</span></td></tr>
 </tbody></table>
 &nbsp;</span></li>
 <li><span style="font-family: inherit;">Select table and add to import entity from DB .</span><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td><a href="http://2.bp.blogspot.com/-t-KRiOry10A/VlW_OW0i35I/AAAAAAAAABw/00-7sYCZAsQ/s1600/2.JPG" style="font-family: inherit; margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-t-KRiOry10A/VlW_OW0i35I/AAAAAAAAABw/00-7sYCZAsQ/s1600/2.JPG" /></a></td></tr>
+<tr><td><a href="NamedStoredProcedureQuery/2.JPG" style="font-family: inherit; margin-left: auto; margin-right: auto;"><img border="0" src="NamedStoredProcedureQuery/2.JPG" /></a></td></tr>
 <tr><td class="tr-caption" style="font-size: 12.8px;"><span style="font-size: x-small; text-align: start;">Select Tables</span></td></tr>
 </tbody></table>
 </li>
 <li><span style="font-family: inherit;">Type <b>SmapleERD</b> for the diagram name.&nbsp;</span></li>
 <li><span style="font-family: inherit;">Type <b>com.jpamodeler.nsp</b> for the Package.&nbsp;</span></li>
 <li><span style="font-family: inherit;">Click Finish.</span><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-KA5Jk-41T_o/VlW_qmfk-OI/AAAAAAAAAB4/3F3Uagn8AGw/s1600/3.JPG" style="font-family: inherit; margin-left: auto; margin-right: auto;"><img border="0" src="http://1.bp.blogspot.com/-KA5Jk-41T_o/VlW_qmfk-OI/AAAAAAAAAB4/3F3Uagn8AGw/s1600/3.JPG" /></a></td></tr>
+<tr><td style="text-align: center;"><a href="NamedStoredProcedureQuery/3.JPG" style="font-family: inherit; margin-left: auto; margin-right: auto;"><img border="0" src="NamedStoredProcedureQuery/3.JPG" /></a></td></tr>
 <tr><td class="tr-caption" style="text-align: center;"><span style="font-size: x-small; text-align: start;">Create JPA Diagram&nbsp;</span>
 <div>
 <span style="font-size: x-small; text-align: start;">
@@ -63,29 +64,29 @@ In this tutorial we will go through the basic execution of stored procedure usin
 <ol style="text-align: left;"><span style="font-family: inherit;">
 <li><span style="font-family: inherit;">Click on the entity &gt; Properties .&nbsp;</span></li>
 <li><span style="font-family: inherit;">From the properties , select <b>Named Stored Procedure Query Property</b>.</span><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td><a href="http://2.bp.blogspot.com/-oivuGt5Lr-Y/VlW_r-HOg7I/AAAAAAAAACA/CsacX49GZ28/s1600/4.JPG" style="font-family: inherit; margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-oivuGt5Lr-Y/VlW_r-HOg7I/AAAAAAAAACA/CsacX49GZ28/s1600/4.JPG" /></a></td></tr>
+<tr><td><a href="NamedStoredProcedureQuery/4.JPG" style="font-family: inherit; margin-left: auto; margin-right: auto;"><img border="0" src="NamedStoredProcedureQuery/4.JPG" /></a></td></tr>
 <tr><td class="tr-caption" style="font-size: 12.8px;"><span style="font-size: x-small; text-align: start;">Open Stored Procedure Query Panel</span></td></tr>
 </tbody></table>
 </li>
 <li>Click on the Add button to create new named stored procedure .<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td><a href="http://4.bp.blogspot.com/-vvXiaViqiVI/VlXApuHTYlI/AAAAAAAAACU/dCI9cFM86KE/s1600/5.JPG" style="font-family: inherit; margin-left: auto; margin-right: auto;"><img border="0" src="http://4.bp.blogspot.com/-vvXiaViqiVI/VlXApuHTYlI/AAAAAAAAACU/dCI9cFM86KE/s1600/5.JPG" /></a></td></tr>
+<tr><td><a href="NamedStoredProcedureQuery/5.JPG" style="font-family: inherit; margin-left: auto; margin-right: auto;"><img border="0" src="NamedStoredProcedureQuery/5.JPG" /></a></td></tr>
 <tr><td class="tr-caption" style="font-size: 12.8px;"><span style="font-size: x-small; text-align: start;">Create Stored Procedure&nbsp;</span></td></tr>
 </tbody></table>
 </li>
 <li>In this panel , first select the <b>Database connection</b>.&nbsp;</li>
 <li>It will fetch the existing stored procedure list from the DB.&nbsp;</li>
 <li>Now select the <b>Stored Procedure</b> and it will fetch existing stored procedure parameter list from the DB.<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td><a href="http://2.bp.blogspot.com/-EwnLgE6lKDg/VlXApuWefPI/AAAAAAAAACQ/Vx1xaY0MS44/s1600/6.JPG" style="font-family: inherit; margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-EwnLgE6lKDg/VlXApuWefPI/AAAAAAAAACQ/Vx1xaY0MS44/s1600/6.JPG" /></a></td></tr>
+<tr><td><a href="NamedStoredProcedureQuery/6.JPG" style="font-family: inherit; margin-left: auto; margin-right: auto;"><img border="0" src="NamedStoredProcedureQuery/6.JPG" /></a></td></tr>
 <tr><td class="tr-caption" style="font-size: 12.8px;"><span style="font-size: x-small; text-align: start;">Select Database Connection to fetch SP&nbsp;</span></td></tr>
 </tbody></table>
 </li>
 <li>Click on the <b>Result Set</b> Tab to add result classes or resultset mappings.<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td><a href="http://2.bp.blogspot.com/-WRXJfW1XHCg/VlXAqa2HVFI/AAAAAAAAACk/IxJCktIQ1b4/s1600/7.JPG" style="font-family: inherit; margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-WRXJfW1XHCg/VlXAqa2HVFI/AAAAAAAAACk/IxJCktIQ1b4/s1600/7.JPG" /></a></td></tr>
+<tr><td><a href="NamedStoredProcedureQuery/7.JPG" style="font-family: inherit; margin-left: auto; margin-right: auto;"><img border="0" src="NamedStoredProcedureQuery/7.JPG" /></a></td></tr>
 <tr><td class="tr-caption" style="font-size: 12.8px;"><span style="font-size: x-small; text-align: start;">Select Result Classes</span></td></tr>
 </tbody></table>
 </li>
 <li>Click on the save button to save named stored procedure.<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td><a href="http://3.bp.blogspot.com/-QL9vWpPup_4/VlXAqaRLV1I/AAAAAAAAACo/10K1bapAnYQ/s1600/8.JPG" style="font-family: inherit; margin-left: auto; margin-right: auto;"><img border="0" src="http://3.bp.blogspot.com/-QL9vWpPup_4/VlXAqaRLV1I/AAAAAAAAACo/10K1bapAnYQ/s1600/8.JPG" /></a></td></tr>
+<tr><td><a href="NamedStoredProcedureQuery/8.JPG" style="font-family: inherit; margin-left: auto; margin-right: auto;"><img border="0" src="NamedStoredProcedureQuery/8.JPG" /></a></td></tr>
 <tr><td class="tr-caption" style="font-size: 12.8px;"><span style="font-size: x-small; text-align: start;">Created Stored Procedure</span></td></tr>
 </tbody></table>
 </li>
@@ -96,7 +97,7 @@ In this tutorial we will go through the basic execution of stored procedure usin
 <span style="font-family: inherit;">Generate the entity classes :</span></h3>
 <ol style="text-align: left;"><span style="font-family: inherit;">
 <li><span style="font-family: inherit;">Right click on the diagram &gt; Generate Source Code</span><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td><a href="http://3.bp.blogspot.com/-bNWh0yPmZMk/VlXAqm1PteI/AAAAAAAAACs/7E4Ago-nBjI/s1600/9.JPG" style="font-family: inherit; margin-left: auto; margin-right: auto;"><img border="0" src="http://3.bp.blogspot.com/-bNWh0yPmZMk/VlXAqm1PteI/AAAAAAAAACs/7E4Ago-nBjI/s1600/9.JPG" /></a></td></tr>
+<tr><td><a href="NamedStoredProcedureQuery/9.JPG" style="font-family: inherit; margin-left: auto; margin-right: auto;"><img border="0" src="NamedStoredProcedureQuery/9.JPG" /></a></td></tr>
 <tr><td class="tr-caption" style="font-size: 12.8px;"><span style="font-size: x-small; text-align: start;">Generate Source Code&nbsp;</span></td></tr>
 </tbody></table>
 </li>
@@ -110,7 +111,7 @@ In this tutorial we will go through the basic execution of stored procedure usin
 <span style="font-family: inherit;"> Click on the Services window &gt; Databases</span>
 
 <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-nCIA77R37OI/VlXApYqGr5I/AAAAAAAAACM/ZLnBdVTYiNY/s1600/10.JPG" style="font-family: inherit; margin-left: auto; margin-right: auto;"><img border="0" src="http://1.bp.blogspot.com/-nCIA77R37OI/VlXApYqGr5I/AAAAAAAAACM/ZLnBdVTYiNY/s1600/10.JPG" /></a></td></tr>
+<tr><td style="text-align: center;"><a href="NamedStoredProcedureQuery/10.JPG" style="font-family: inherit; margin-left: auto; margin-right: auto;"><img border="0" src="NamedStoredProcedureQuery/10.JPG" /></a></td></tr>
 <tr><td class="tr-caption" style="text-align: center;"><span style="font-size: x-small; text-align: start;">Database existing table and data&nbsp;</span></td></tr>
 </tbody></table>
 
@@ -143,7 +144,7 @@ In this tutorial we will go through the basic execution of stored procedure usin
 <ol style="text-align: left;">
 <li><span style="font-family: inherit;">Right-click the EJB module and choose File &gt; New File wizard .&nbsp;</span></li>
 <li><span style="font-family: inherit;">In the New File wizard, expand the Enterprises JavaBeans and select Session Beans as shown in the figure below.</span><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td><a href="http://1.bp.blogspot.com/-xj3ZH-Wa1Lk/VlXPE4gHo6I/AAAAAAAAADQ/wP1lYnUHzM8/s1600/12.JPG" style="font-family: inherit; margin-left: auto; margin-right: auto;"><img border="0" src="http://1.bp.blogspot.com/-xj3ZH-Wa1Lk/VlXPE4gHo6I/AAAAAAAAADQ/wP1lYnUHzM8/s1600/12.JPG" /></a></td></tr>
+<tr><td><a href="NamedStoredProcedureQuery/12.JPG" style="font-family: inherit; margin-left: auto; margin-right: auto;"><img border="0" src="NamedStoredProcedureQuery/12.JPG" /></a></td></tr>
 <tr><td class="tr-caption" style="font-size: 12.8px;"><span style="font-size: x-small; text-align: start;">Create Tester</span></td></tr>
 </tbody></table>
 </li>
