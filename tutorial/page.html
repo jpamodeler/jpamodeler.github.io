@@ -180,20 +180,16 @@
             padding: 0px 10px 0px 0px;
         } 
         </style>
-        <div id="TABLE_TEMPLATE" style="display: none;">
-            <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
-                <tbody>
-                    <tr>
-                        <td style="text-align: center;"><a id="LINK" href="" style="margin-left: auto; margin-right: auto;">
-                                <img border="0" src="" style="max-height: 600px;max-width: 1200px"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td  id="CAPTION" class="tr-caption" style="text-align: center;">Browse NBM</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <div class = "row" id="TABLE_TEMPLATE" style="display: none;">
+            <div class = "col-centered">
+                <div id="LINK" class = "thumbnail">
+                    <img src = "/bootstrap/images/kittens.jpg" alt = "Generic placeholder thumbnail">
+                </div>
+                <div class = "caption">
+                    <p id="CAPTION"></p>
+                </div>
+            </div>
+        </div>   
         <script>
             function loadImage(){
                 $("img[caption]").each(function(){
@@ -211,5 +207,20 @@
 //                $(this).addClass("wow fadeInUp").attr("data-wow-duration","900ms").attr("data-wow-delay","100ms");
 //            });
             </script>
+            <style>
+                #CAPTION{
+                        text-align: center;
+                        margin-bottom: 20px;
+                        color:#666666;
+                }
+                #CAPTION:hover{
+                       color:#555555;
+                }
+                #LINK {
+                        margin-bottom: 0px;
+                        border: none;
+                }
+                }
+            </style>
 
 </html>
