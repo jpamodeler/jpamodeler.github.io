@@ -40,7 +40,8 @@ border-width: 0;
 }
 
 #LOAD h2 {
-    font-size: 30px;
+    font-size: 26px;
+    /* margin-bottom: -15px; */
 }
 
 #LOAD h3 {
@@ -356,6 +357,7 @@ input.span-24,textarea.span-24 {
 body #LOAD {
 overflow-x: hidden;
     font-weight: normal;
+    margin: 0px;
 }
 .post-body.entry-content {
 float: none;
@@ -402,4 +404,16 @@ font-weight: bold;
 }
         #LOAD h3 {
     padding-top: 25px;
+}
+
+@media only screen and (max-width : 400px) {
+#LOAD h3 {
+    font-size: 17px;
+}
+#LOAD h3 {
+    padding-top: 0px;
+}
+#LOAD h2 {
+    font-size: 20px;
+}
 }

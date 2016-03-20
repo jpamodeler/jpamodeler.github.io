@@ -56,6 +56,7 @@
                             <li class="dropdown"><a href="#">Tutorial <i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     <li><a href="page.html?l=AttributeMapping">Attribute Mapping</a></li>
+                                    <li><a href="page.html?l=AssociationMapping">Association Mapping</a></li>
                                     <li><a href="page.html?l=NamedEntityGraph">Entity Graph</a></li>
                                     <li><a href="page.html?l=NamedStoredProcedureQuery">Stored Procedure</a></li>
                                     <li><a href="page.html?l=Embeddable">Embeddable</a></li>
@@ -179,24 +180,25 @@
             padding: 0px 10px 0px 0px;
         } 
         </style>
-
-           <table id="TABLE_TEMPLATE" align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="display: none;margin-left: auto; margin-right: auto; text-align: center;">
-         <tbody>
-            <tr>
-               <td style="text-align: center;"><a id="LINK" href="" style="margin-left: auto; margin-right: auto;">
-                  <img border="0" src="" style="max-height: 600px;max-width: 1200px"></a>
-               </td>
-            </tr>
-            <tr>
-               <td  id="CAPTION" class="tr-caption" style="text-align: center;">Browse NBM</td>
-            </tr>
-         </tbody>
-      </table>
+        <div id="TABLE_TEMPLATE" style="display: none;">
+            <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                <tbody>
+                    <tr>
+                        <td style="text-align: center;"><a id="LINK" href="" style="margin-left: auto; margin-right: auto;">
+                                <img border="0" src="" style="max-height: 600px;max-width: 1200px"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td  id="CAPTION" class="tr-caption" style="text-align: center;">Browse NBM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <script>
             function loadImage(){
                 $("img[caption]").each(function(){
                  var img = $(this);
-                 var table =  $("#TABLE_TEMPLATE").clone().show(); 
+                 var table =  $("#TABLE_TEMPLATE").clone().attr("id","").show(); 
                  table.find("#LINK img").attr("src", img.attr("src")).attr("alt", img.attr("caption")); 
                  table.find("#CAPTION").html(img.attr("caption"));
                  img.replaceWith(function(){

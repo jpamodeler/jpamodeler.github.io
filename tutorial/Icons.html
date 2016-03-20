@@ -1,23 +1,4 @@
-<style>
-    td:last-child{
-        float:left;
-    }
-    td:first-child{
-        text-align: center;
-        width: 50%;
 
-    }
-    table {
-        margin-left: 4%;
-        margin-right: auto;
-        text-align: center;
-        width: 80% !important;
-    }
-    thead {
-        font-weight: bold;
-        border-bottom: 1px solid #ddd
-    }
-</style>
 <h3 id="TOC" style="text-align: left;">
     Reference (Icons) :</h3>
 
@@ -35,41 +16,47 @@
     <li><a href="#DI">Database Icons</a></li>
 </ul>
 This section includes information on each of the icons and buttons used in the JPA Modeler.
-The following icons are used throughout the JPA Modeler:
+The following icons are used throughout the JPA Modeler :
 
 
 
 <h4 id="CI">
-    Class Icons:</h4>
-<table>
+    Class Icons :</h4>
+
+<div class="table-responsive">
+    <table class="table table-hover table-striped">
     <thead><tr><td>Icon</td><td>Description</td></tr></thead>
     <tbody>
         <tr><td><img src="Icons/class/ENTITY.png" /></td><td>@Entity</td></tr>
         <tr><td><img src="Icons/class/ABSTRACT_ENTITY.png" /></td><td>abstract @Entity</td></tr>
         <tr><td><img src="Icons/class/MAPPED_SUPER_CLASS.png" /></td><td>@MappedSuperClass</td></tr>
-        <tr><td><img src="Icons/class/EMBEDDABLE.png" /></td><td>@Embeddable</td></tr>
+        <tr data-href="page.html?l=Embeddable" ><td><img src="Icons/class/EMBEDDABLE.png" /></td><td>@Embeddable</td></tr>
     </tbody>
 </table>
+</div>
 
 <h4 id="AI">
-    Attribute Icons:</h4>
-<table>
+    Attribute Icons :</h4>
+<div class="table-responsive">
+<table class="table table-hover table-striped">
     <thead><tr><td>Icon</td><td>Description</td></tr></thead>
     <tbody>
-        <tr><td><img src="Icons/attribute/id-attribute.png" /></td><td>@Id</td></tr>
+        <tr data-href="page.html?l=AttributeMapping#IDM"><td><id></id></td><td>@Id</td></tr>
         <tr><td><img src="Icons/attribute/embedded-id-attribute.png" /></td><td>@EmbeddedId</td></tr>
-        <tr><td><img src="Icons/attribute/basic-attribute.png" /></td><td>@Basic</td></tr>
-        <tr><td><img src="Icons/attribute/basic-collection-attribute.png" /></td><td>@ElementCollection</td></tr>
-        <tr><td><img src="Icons/attribute/transient-attribute.png" /></td><td>@Transient</td></tr>
-        <tr><td><img src="Icons/attribute/version-attribute.png" /></td><td>@Version</td></tr>
-        <tr><td><img src="Icons/attribute/single-value-embedded.gif" /></td><td>@Embedded</td></tr>
-        <tr><td><img src="Icons/attribute/multi-value-embedded.gif" /></td><td>@ElementCollection @Embedded</td></tr>
+        <tr data-href="page.html?l=AttributeMapping#BM"><td><img src="Icons/attribute/basic-attribute.png" /></td><td>@Basic</td></tr>
+        <tr data-href="page.html?l=AttributeMapping#ECBM"><td><img src="Icons/attribute/basic-collection-attribute.png" /></td><td>@ElementCollection</td></tr>
+        <tr data-href="page.html?l=AttributeMapping#TM"><td><img src="Icons/attribute/transient-attribute.png" /></td><td>@Transient</td></tr>
+        <tr data-href="page.html?l=AttributeMapping#VM"><td><img src="Icons/attribute/version-attribute.png" /></td><td>@Version</td></tr>
+        <tr data-href="page.html?l=AttributeMapping#EM"><td><img src="Icons/attribute/single-value-embedded.gif" /></td><td>@Embedded</td></tr>
+        <tr data-href="page.html?l=AttributeMapping#ECEM"><td><img src="Icons/attribute/multi-value-embedded.gif" /></td><td>@ElementCollection @Embedded</td></tr>
     </tbody>
 </table>
+</div>
 
-<h4 id="RI">Relation Attribute Icons:</h4>
+<h4 id="RI">Relation Attribute Icons :</h4>
 <h6 id="URI"><img src="Icons/relation/uni.png" />Unidirectional Relationship :</h6>
-<table>
+<div class="table-responsive">
+<table class="table table-hover table-striped">
     <thead><tr><td>Icon</td><td>Description</td></tr></thead>
     <tbody>
         <tr><td><img src="Icons/relation/uoto-attribute.png" /></td><td>One To One</td></tr>
@@ -80,9 +67,11 @@ The following icons are used throughout the JPA Modeler:
         <tr><td><img src="Icons/relation/umtm-attribute.png" /></td><td>Many To Many</td></tr>
     </tbody>
 </table>
+</div>
 
 <h6 id="BRI"><img src="Icons/relation/bi.png" />Bidirectional Relationship :</h6>
-<table>
+<div class="table-responsive">
+<table class="table table-hover table-striped">
     <thead><tr><td>Icon</td><td>Description</td></tr></thead>
     <tbody>
         <tr><td><img src="Icons/relation/boto-attribute.png" /></td><td>One To One</td></tr>
@@ -93,9 +82,11 @@ The following icons are used throughout the JPA Modeler:
         <tr><td><img src="Icons/relation/bmtm-attribute.png" /></td><td>Many To Many</td></tr>
     </tbody>
 </table>
+</div>
 
-<h4 id="FI"> Flow Icons:</h4>
-<table>
+<h4 id="FI"> Flow Icons :</h4>
+<div class="table-responsive">
+<table class="table table-hover table-striped">
     <thead><tr><td>Icon</td><td>Description</td></tr></thead>
     <tbody>
         <tr><td><img src="Icons/class/generalization.png" /></td><td>Inheritance / Generalization</td></tr>
@@ -106,10 +97,11 @@ The following icons are used throughout the JPA Modeler:
         <tr><td><img src="Icons/attribute/composition-anchor.png" /></td><td>@Embeddable composition</td></tr>
     </tbody>
 </table>
+</div>
 
-
-<h4 id="DI"> Database Icons:</h4>
-<table>
+<h4 id="DI"> Database Icons :</h4>
+<div class="table-responsive">
+<table class="table table-hover table-striped">
     <thead><tr><td>Icon</td><td>Description</td></tr></thead>
     <tbody>
         <tr><td><img src="Icons/db/TAB_ICON.png" /></td><td>Database</td></tr>
@@ -121,5 +113,37 @@ The following icons are used throughout the JPA Modeler:
         <tr><td><img src="Icons/db/FOREIGN_KEY.gif" /></td><td>@JoinColumn</td></tr>
     </tbody>
 </table>
+</div>
 
+<style>
+    table tr[data-href]{
+        cursor:pointer;
+    }
 
+/*    td:last-child{
+        float:left;
+    }
+*/    td:first-child{
+        text-align: center;
+        width: 30%;
+
+    }
+/*    table {
+        margin-left: 4%;
+        margin-right: auto;
+        text-align: center;
+        width: 80% !important;
+    }*/
+    thead {
+        font-weight: bold;
+        border-bottom: 1px solid #ddd
+    }
+</style>
+<script>
+    $(document).ready(function(){
+        $('table tr[data-href]').click(function (){
+                window.location = $(this).data('href');
+                return false;
+        })
+    })
+    </script>

@@ -748,4 +748,7 @@
     #DEMO_CONTAINER{
         display: none;
     }
+    #home-slider .main-slider {
+    height: 245px;
+}
 }
