@@ -23,7 +23,6 @@
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/ico/apple-touch-icon-72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="../images/ico/apple-touch-icon-57-precomposed.png">
     </head><!--/head-->
-
     <body>
         <header id="header">      
 
@@ -38,7 +37,7 @@
                         </button>
 
                         <a class="navbar-brand" href="index.html">
-                            <h1><img src="../images/logo.png" alt="logo"></h1>
+                            <h1><img id="LOGO" src="../images/logo.png" alt="logo"></h1>
                         </a>
 
                     </div>
@@ -50,11 +49,13 @@
                                 <ul role="menu" class="sub-menu">
                                     <li><a href="page.html?l=Requirement">Requirement</a></li>
                                     <li><a href="page.html?l=Installation">Installation</a></li>
+                                    <li><a href="page.html?l=QuickStart">Quick Start</a></li>
                                     <li><a href="page.html?l=Icons">Reference (Icons)</a></li>
                                 </ul>
                             </li> 
                             <li class="dropdown"><a href="#">Tutorial <i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
+                                    <li><a href="page.html?l=AttributeMapping">Attribute Mapping</a></li>
                                     <li><a href="page.html?l=NamedEntityGraph">Entity Graph</a></li>
                                     <li><a href="page.html?l=NamedStoredProcedureQuery">Stored Procedure</a></li>
                                     <li><a href="page.html?l=Embeddable">Embeddable</a></li>
@@ -84,6 +85,7 @@
 
         <section id="features">
             <div class="container">
+                
                 <div class="row" id="LOAD">
 
 
@@ -123,7 +125,9 @@
                 dataType: "html",
                 success: function (content) {
                     $('#LOAD').html(content);
+                    loadImage();
                     $('#LOAD').loadGist();
+                    
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
                     console.log(textStatus, errorThrown);
@@ -167,7 +171,43 @@
     </script>
     <link href="css/tutorial.css" rel="stylesheet">
     <link href="css/diictionary.css" rel="stylesheet">
+    <style>
+        #LOGO {
+            height: 63px;
+        } 
+        #header {
+            padding: 0px 10px 0px 0px;
+        } 
+        </style>
 
-
+           <table id="TABLE_TEMPLATE" align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="display: none;margin-left: auto; margin-right: auto; text-align: center;">
+         <tbody>
+            <tr>
+               <td style="text-align: center;"><a id="LINK" href="" style="margin-left: auto; margin-right: auto;">
+                  <img border="0" src="" style="max-height: 600px;max-width: 1200px"></a>
+               </td>
+            </tr>
+            <tr>
+               <td  id="CAPTION" class="tr-caption" style="text-align: center;">Browse NBM</td>
+            </tr>
+         </tbody>
+      </table>
+        <script>
+            function loadImage(){
+                $("img[caption]").each(function(){
+                 var img = $(this);
+                 var table =  $("#TABLE_TEMPLATE").clone().show(); 
+                 table.find("#LINK img").attr("src", img.attr("src")).attr("alt", img.attr("caption")); 
+                 table.find("#CAPTION").html(img.attr("caption"));
+                 img.replaceWith(function(){
+                     return table;
+                 })
+                }); 
+            }
+            
+//            $("$LOAD li").each(function (){
+//                $(this).addClass("wow fadeInUp").attr("data-wow-duration","900ms").attr("data-wow-delay","100ms");
+//            });
+            </script>
 
 </html>

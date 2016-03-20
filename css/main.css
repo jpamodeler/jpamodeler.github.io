@@ -385,12 +385,13 @@ ul.sub-menu {
 **************************/
 
 #footer {
-    padding-bottom: 0px;
+    /* padding-bottom: 36px; */
     /* background-image: url(../images/modeler/footer/footer.png); */
     /* background-repeat: repeat-x; */
     background-position: bottom;
     background-size: contain;
     background-color: #3572b0;
+    bottom: 0px;
 }
 
 #footer h1{
@@ -515,10 +516,11 @@ ul.sub-menu {
 }
 
 .copyright-text{
-    margin-top: 70px;
+    margin-top: 10px;
     color: #fff;
-    font-size: 16px;  
-    padding-bottom: 15px;
+    font-size: 16px;
+    padding-bottom: 10px;
+    /* height: 19%; */
 }
 
 .copyright-text a {
