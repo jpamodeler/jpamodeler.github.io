@@ -38,10 +38,8 @@ Lets have a look how to define and use an entity graph in JPA Modeler.
 <h3 id="DIA">
 Create the JPA Diagram :</h3>
 <ol style="text-align: left;">
-<li>Goto File menu &gt; New File &gt; Persistence category.<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td><a href="NamedEntityGraph/1.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="NamedEntityGraph/1.png" /></a></td></tr>
-<tr><td class="tr-caption" style="font-size: 12.8px;"><span style="font-size: x-small;">Select JPA Diagram</span></td></tr>
-</tbody></table>
+<li>Goto File menu &gt; New File &gt; Persistence category.
+    <img src="NamedEntityGraph/1.png" caption="Select JPA Diagram" />
 </li>
 <li>From the Persistence , select JPA Diagram and click Next. </li>
 <li>Type <b>SampleDiagram </b>for the diagram name. </li>
@@ -53,110 +51,71 @@ When you click Finish, the IDE creates the JPA Diagram and opens the diagram in 
 <h3 id="CRE">
 Create the Entities:</h3>
 <ol style="text-align: left;">
-<li>Drag &amp; Drop the Entities <entity/> from the Palette window to designer. <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td style="text-align: center;"><a href="NamedEntityGraph/pal.JPG" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="NamedEntityGraph/pal.JPG" /></a></td></tr>
-<tr><td class="tr-caption" style="font-size: 12.8px;">Palette</td></tr>
-</tbody></table>
+<li>Drag &amp; Drop the Entities <entity/> from the Palette window to designer. 
+    <img src="NamedEntityGraph/pal.JPG" caption="Palette" />
 </li>
 <li>Double click on the Entity and rename to <b>Movie</b>.</li>
 <li>To create <b>basic attribute</b>, click on the <b>Movie </b>Entity <basic/> property.</li>
 <li>To create <b><b>relation </b>attribute</b>, click on the <b>Movie </b>Entity <entity></entity>.
-
-<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td style="text-align: center;"><a href="NamedEntityGraph/12.JPG" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="NamedEntityGraph/12.JPG" /></a></td></tr>
-<tr><td class="tr-caption" style="text-align: center;"><span style="font-size: 12.8px;">Add relation property</span></td></tr>
-</tbody></table>
-<div class="separator" style="clear: both; text-align: center;">
-</div>
+    <img src="NamedEntityGraph/12.JPG" caption="Add relation property" />
 </li>
-<li>Now, drag OneToMany <otm></otm> to <b>MovieActor</b> class.   <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td style="text-align: center;"><a href="NamedEntityGraph/13.JPG" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="NamedEntityGraph/13.JPG" /></a></td></tr>
-<tr><td class="tr-caption" style="text-align: center;">Relation property</td></tr>
-</tbody></table>
-<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td style="text-align: center;"><a href="NamedEntityGraph/14.JPG" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="NamedEntityGraph/14.JPG" /></a></td></tr>
-<tr><td class="tr-caption" style="text-align: center;">Final design</td></tr>
-</tbody></table>
+<li>Now, drag OneToMany <otm></otm> to <b>MovieActor</b> class. 
+ <img src="NamedEntityGraph/13.JPG" caption="Relation property" />
+ <img src="NamedEntityGraph/14.JPG" caption="Final design" />
 </li>
 </ol>
 <h3 id="CEG" style="text-align: left;">
 Create the @NamedEntityGrpah :</h3>
 <blockquote class="tr_bq">
-<code><a href="NamedEntityGraph.html#attributeNodes--" target="_blank">attributeNodes</a></code> ) that have be loaded.</blockquote>
-<ol style="text-align: left;"><span style="font-weight: normal;">
+<code><a target="_blank" href="http://docs.oracle.com/javaee/7/api/javax/persistence/NamedEntityGraph.html">NamedEntityGraph</a></code>
+defines a unique name and a list of attributes ( the <code><a target="_blank" href="http://docs.oracle.com/javaee/7/api/javax/persistence/NamedEntityGraph.html#attributeNodes--">attributeNodes</a></code> ) that have be loaded.</blockquote>
+<ol style="text-align: left;">
 <li style="font-weight: normal;">Click on the entity &gt; Properties.</li>
-<li style="font-weight: normal;">From the properties, select <b>Named Entity Graphs </b>Property.<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td style="text-align: center;"><a href="NamedEntityGraph/15.JPG" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="NamedEntityGraph/15.JPG" /></a></td></tr>
-<tr><td class="tr-caption" style="text-align: center;"><span style="font-size: x-small;">Open Entity Graph Panel</span></td></tr>
-</tbody></table>
-<div class="separator" style="clear: both; text-align: center;">
-</div>
+<li style="font-weight: normal;">From the properties, select <b>Named Entity Graphs </b>Property.
+     <img src="NamedEntityGraph/15.JPG" caption="Open Entity Graph Panel" />
 </li>
-<li style="font-weight: normal;"><span style="font-weight: normal;">Click on the </span><b>Add button</b> to create new named entity graph.<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="font-weight: normal; margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td style="text-align: center;"><a href="NamedEntityGraph/16.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="NamedEntityGraph/16.png" /></a></td></tr>
-<tr><td class="tr-caption" style="text-align: center;">Create Entity Grpah</td></tr>
-</tbody></table>
-<div class="separator" style="clear: both; font-weight: normal; text-align: center;">
-</div>
+<li style="font-weight: normal;"><span style="font-weight: normal;">Click on the </span><b>Add button</b> to create new named entity graph.
+    <img src="NamedEntityGraph/16.png" caption="Create Entity Graph" />
 </li>
-<li style="font-weight: normal;">In this panel , you may view entity attributes with check-box in the tree structure. <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td style="text-align: center;"><a href="NamedEntityGraph/17.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="NamedEntityGraph/17.png" /></a></td></tr>
-<tr><td class="tr-caption" style="text-align: center;">Entity Graph editor</td></tr>
-</tbody></table>
+<li style="font-weight: normal;">In this panel , you may view entity attributes with check-box in the tree structure. 
+    <img src="NamedEntityGraph/17.png" caption="Entity Graph editor" />
 </li>
-<li style="font-weight: normal;">Select the attribute from the tree to add the fields to the entity graph which will be part of <code>attributeNodes</code> element of <code>@NamedEntityGraph</code> with a <code>javax.persistence.NamedAttributeNode</code> annotation and then, type the entity graph name.<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td style="text-align: center;"><a href="NamedEntityGraph/18.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="NamedEntityGraph/18.png" /></a></td></tr>
-<tr><td class="tr-caption" style="text-align: center;">select attributes</td></tr>
-</tbody></table>
+<li style="font-weight: normal;">Select the attribute from the tree to add the fields to the entity graph which will be part of <code>attributeNodes</code> element of <code>@NamedEntityGraph</code> with a <code>javax.persistence.NamedAttributeNode</code> annotation and then, type the entity graph name.
+    <img src="NamedEntityGraph/18.png" caption="select attributes" />
 </li>
 <li style="font-weight: normal;">In this example, the name of the named entity graph is <b>movieWithActorsAndAwards</b> and include the <b>movieActors</b> field.</li>
-<li style="font-weight: normal;">Click on the save button to <b>save named entity graph</b>.  <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td><a href="NamedEntityGraph/21.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="NamedEntityGraph/21.png" /></a></td></tr>
-<tr><td class="tr-caption" style="font-size: 12.8px;"><span style="font-size: x-small;">Created Entity Graph</span></td></tr>
-</tbody></table>
+<li style="font-weight: normal;">Click on the save button to <b>save named entity graph</b>. 
+    <img src="NamedEntityGraph/21.png" caption="Created Entity Graph" />
 </li>
-</span></ol>
-<h3 id="NES">
-Named sub graph :</h3>
+</ol>
+
+<h3 id="NES">Named sub graph :</h3>
 <blockquote class="tr_bq">
 The definition of a named sub graph is similar to the definition of an named entity graph and can be referenced as an attributeNode.</blockquote>
 We used the entity graph to define the fetch operation of the Movie entity. If we want to do the same for the <b>MovieActor</b> entity, we can do this with an entity sub graph.
 Now, we will edit the entity graph, expand the <b>movieActors</b> attribute and then select the <b>movieActorAwards</b> attribute.
-<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td><a href="NamedEntityGraph/19.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="NamedEntityGraph/19.png" /></a></td></tr>
-<tr><td class="tr-caption">design Sub Entity Graph</td></tr>
-</tbody></table>
+    <img src="NamedEntityGraph/19.png" caption="design Sub Entity Graph" />
 The following code snippets shows the definition of a sub graph to load the <i>MovieActorAward</i> of each <b>MovieActor</b>. The defined entity graph will fetch an <b>Movie</b> with all <i>MovieActors</i> and their <i>MovieActorAwards</i>.<script src="https://gist.github.com/jShiwaniGupta/ff292e0a9f975219bb91.js"></script> 
 <h3 id="EGT">
 View the Entity Graph based on Graph Type :</h3>
 <blockquote class="tr_bq">
 An entity graph can be used as a fetch or a load graph. </blockquote>
 To check the final view of entity graph based on the graph type on the <b>View button</b>, after selection of attribute.
-<div class="separator" style="clear: both; text-align: center;">
-<a href="NamedEntityGraph/3.png" imageanchor="1"><img border="0" src="NamedEntityGraph/3.png" /></a></div>
-<div class="separator" style="clear: both; text-align: center;">
-
-</div>
+<img src="NamedEntityGraph/3.png" caption="" />
 <ul>
-<li>If a <b>fetch graph</b> is used, only the attributes specified by the entity graph will be treated as <code><a href="http://docs.oracle.com/javaee/7/api/javax/persistence/FetchType.html#EAGER" target="_blank">FetchType.EAGER</a></code> and all other attributes will be lazy. <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td style="text-align: center;"><a href="NamedEntityGraph/23.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="NamedEntityGraph/23.png" /></a></td></tr>
-<tr><td class="tr-caption" style="text-align: center;">Fetch Graph</td></tr>
-</tbody></table>
+<li>If a <b>fetch graph</b> is used, only the attributes specified by the entity graph will be treated as <code><a href="http://docs.oracle.com/javaee/7/api/javax/persistence/FetchType.html#EAGER" target="_blank">FetchType.EAGER</a></code> and all other attributes will be lazy. 
+<img src="NamedEntityGraph/23.png" caption="Fetch Graph" />    
 </li>
-<li>If a <b>load graph</b> is used, all attributes that are not specified by the entity graph will keep their default fetch type.<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td style="text-align: center;"><a href="NamedEntityGraph/24.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="NamedEntityGraph/24.png" /></a></td></tr>
-<tr><td class="tr-caption" style="text-align: center;">Load Graph</td></tr>
-</tbody></table>
+<li>If a <b>load graph</b> is used, all attributes that are not specified by the entity graph will keep their default fetch type.
+    <img src="NamedEntityGraph/24.png" caption="Load Graph" />
 </li>
 </ul>
 Entity graphs have attributes that correspond to the fields that will be eagerly fetched during a <code>find</code> or query operation. The primary key and version fields of the entity class are always fetched and do not need to be explicitly added to an entity graph.  
 <h3 id="GSRC">
 Generate the entity classes :</h3>
 <ol style="text-align: left;">
-<li>Right click on the diagram &gt; Generate Source Code.<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td style="text-align: center;"><a href="NamedEntityGraph/22.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="NamedEntityGraph/22.png" /></a></td></tr>
-<tr><td class="tr-caption" style="text-align: center;"><span style="font-size: x-small;">Generate Source Code</span></td></tr>
-</tbody></table>
+<li>Right click on the diagram &gt; Generate Source Code.
+    <img src="NamedEntityGraph/22.png" caption="Generate Source Code" />
 </li>
 <li>Click on the Movie entity class to view source code. <script src="https://gist.github.com/jShiwaniGupta/eeef86748727574e80ae.js"></script></li>
 </ol>
