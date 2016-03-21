@@ -414,4 +414,8 @@ font-weight: bold;
 #LOAD h2 {
     font-size: 20px;
 }
+#LOAD .gist-meta a:link,#LOAD .gist-meta a:visited {
+
+    color: #777 !important;
+}
 }

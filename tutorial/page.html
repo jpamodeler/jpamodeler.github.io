@@ -183,11 +183,9 @@
         <div class = "row" id="TABLE_TEMPLATE" style="display: none;">
             <div class = "col-centered">
                 <div id="LINK" class = "thumbnail">
-                    <img src = "/bootstrap/images/kittens.jpg" alt = "Generic placeholder thumbnail">
+                <a data-lightbox="example-set"><img/></a>
                 </div>
-                <div class = "caption">
-                    <p id="CAPTION"></p>
-                </div>
+                <div class = "caption"><p id="CAPTION"></p></div>
             </div>
         </div>   
         <script>
@@ -195,7 +193,8 @@
                 $("img[caption]").each(function(){
                  var img = $(this);
                  var table =  $("#TABLE_TEMPLATE").clone().attr("id","").show(); 
-                 table.find("#LINK img").attr("src", img.attr("src")).attr("alt", img.attr("caption")); 
+                 table.find("#LINK a img").attr("src", img.attr("src")).attr("alt", img.attr("caption")); 
+                 table.find("#LINK a").attr("href", img.attr("src")); 
                  table.find("#CAPTION").html(img.attr("caption"));
                  img.replaceWith(function(){
                      return table;
