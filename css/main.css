@@ -166,7 +166,7 @@ h3{
 
 #header{
     margin-bottom: 0;
-    padding: 30px 0 60px 0;
+    padding: 10px 0 60px 0;
 }
 
 #header .navbar-inverse .container{
@@ -236,9 +236,25 @@ h3{
     color:#A22523;
 }
 
-.social-icons ul li a:hover .fa-dribbble {
-    color:#E94989;
+.social-icons ul li a:hover .fa-youtube {
+    color:#ff0000;
 }
+.social-icons ul li a:hover .fa-github {
+    color:#000000;
+}
+ul li .fa-youtube-play {
+       color:#ff8888;
+       padding-left: 2px;
+}
+/*.social-icons ul li a:hover .fa-bug {
+    color:#ff3333;
+}
+.social-icons ul li a:hover .fa-previous {
+    color:#333333;
+}
+.social-icons ul li a:hover .fa-users {
+    color:#2AA7DC;
+}*/
 
 .social-icons ul li a:hover .fa-linkedin {
     color:#006DC0;
