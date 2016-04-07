@@ -242,6 +242,10 @@ h3{
 .social-icons ul li a:hover .fa-github {
     color:#000000;
 }
+
+.social-icons ul li a:hover .fa-heart {
+    color:#ff4444;
+}
 ul li .fa-youtube-play {
        color:#ff8888;
        padding-left: 2px;
