@@ -1,0 +1,128 @@
+<h3>Primary Keys Corresponding to Derived Identities</h3>
+
+<blockquote>The identity of an entity may be derived from the identity of another entity (the <b>“parent”</b> entity) when
+the former entity (the <b>“dependent”</b> entity) is the owner of a <b>many-to-one</b> or <b>one-to-one</b> relationship to
+the parent entity and a foreign key maps the relationship from dependent to parent.
+</blockquote>
+
+<p>If the dependent entity class has primary key attributes in addition to those corresponding to the parent's
+primary key or if the parent has a composite primary key, an embedded id or id class must be used to
+specify the primary key of the dependent entity.</p>
+<img src="DerivedIdentities/options.png" caption="Select Entity > Property panel > Composite PrimaryKey Type" style="border: solid 1px #999;"/>
+
+
+<ol style="text-align: left;">
+    <li><a href="#PI">Parent -- Dependent (additional primary key)</a>
+        <ul>
+            <li>1.a) <a href="#E1A">Simple -- IdClass</a></li>
+            <li>1.b) <a href="#E1B">Simple -- EmbeddedId</a></li>
+            <li>2.a) <a href="#E2A">IdClass -- IdClass</a></li>
+            <li>2.b) <a href="#E2B">IdClass -- EmbeddedId</a></li>
+            <li>3.a) <a href="#E3A">EmbeddedId -- IdClass</a></li>
+            <li>3.b) <a href="#E3B">EmbeddedId -- EmbeddedId</a></li>
+        </ul>
+    </li>
+    <li><a href="#PII">Parent -- Dependent (single primary key)</a>
+        <ul>
+            <li>4) &nbsp;&nbsp;<a href="#E4"> Simple -- Simple</a></li>
+            <li>5.a) <a href="#E5A">IdClass -- IdClass</a></li>
+            <li>5.b) <a href="#E5B">IdClass -- EmbeddedId</a></li>
+            <li>6.a) <a href="#E6A">EmbeddedId -- IdClass</a></li>
+            <li>6.b) <a href="#E6B">EmbeddedId -- EmbeddedId</a></li>
+        </ul>
+    </li>
+</ol> 
+
+Parent Entity
+Dependent Entity
+
+<h2 id="PI">Part(I) - </h2><h6>
+Dependent entity class has primary key attributes in addition to
+ those corresponding to the parent's primary key</h6>
+
+
+<h3 id="E1A">Example 1(a) : Simple -- IdClass</h3>
+The parent entity has a simple primary key and 
+the dependent entity uses IdClass to represent a composite key:
+<img src="DerivedIdentities/JPA_Ex1a.png" caption="" />
+<img src="DerivedIdentities/DB_Ex1a.png" caption="" />
+<script src="https://gist.github.com/jGauravGupta/0034d44334c1451393d4839cd036c5bd.js"></script>
+
+
+<h3 id="E1B">Example 1(b) : Simple -- EmbeddedId</h3>
+The parent entity has a simple primary key and 
+the dependent entity uses EmbeddedId to represent a composite key:
+<img src="DerivedIdentities/JPA_Ex1b.png" caption="" />
+<img src="DerivedIdentities/DB_Ex1b.png" caption="" />
+<script src="https://gist.github.com/jGauravGupta/bcc643738bcfb607aa0aef7661387022.js"></script>
+
+<h3 id="E2A">Example 2(a) : IdClass -- IdClass</h3>
+The parent entity uses IdClass and 
+the dependent entity uses IdClass:
+<img src="DerivedIdentities/JPA_Ex2a.png" caption="" />
+<img src="DerivedIdentities/DB_Ex2a.png" caption="" />
+
+<h3 id="E2B">Example 2(b) : IdClass -- EmbeddedId</h3>
+The parent entity uses IdClass and 
+the dependent entity uses EmbeddedId. The type of the empPK attribute is the same as that
+of the primary key of Employee. The EmployeeId class needs to be annotated Embeddable:
+<img src="DerivedIdentities/JPA_Ex2b.png" caption="" />
+<img src="DerivedIdentities/DB_Ex2b.png" caption="" />
+
+<h3 id="E3A">Example 3(a) : EmbeddedId -- IdClass</h3>
+The parent entity uses EmbeddedId and
+the dependent entity uses IdClass:
+<img src="DerivedIdentities/JPA_Ex3a.png" caption="" />
+<img src="DerivedIdentities/DB_Ex3a.png" caption="" />
+
+<h3 id="E3B">Example 3(b) : EmbeddedId -- EmbeddedId</h3>
+The parent entity uses EmbeddedId and
+the dependent entity uses EmbeddedId:
+<img src="DerivedIdentities/JPA_Ex3b.png" caption="" />
+<img src="DerivedIdentities/DB_Ex3b.png" caption="" />
+
+<h2>Part(II) - </h2><h6>
+Dependent entity has a single primary key attribute (i.e., the relationship attribute),</h6>
+
+<h3 id="E4">Example 4 : Simple -- Simple</h3>
+The parent entity has a simple primary key and
+The dependent entity has a single primary key attribute which is mapped by the relationship
+attribute. The primary key of MedicalHistory is of type String.
+<img src="DerivedIdentities/JPA_Ex4a.png" caption="" />
+<img src="DerivedIdentities/DB_Ex4a.png" caption="" />
+If the dependent entity has a single primary key attribute (i.e, the relationship attribute or an attribute
+that corresponds to the relationship attribute) and the primary key of the parent entity is a simple pri-
+mary key, the primary key of the dependent entity is a simple primary key of the same type as that of the
+parent entity (and neither EmbeddedId nor IdClass is specified). In this case, either (1) the rela-
+tionship attribute is annotated Id, or (2) a separate Id attribute is specified and the relationship attribute
+is annotated MapsId (and the value element of the MapsId annotation is not specified).
+
+
+<h3 id="E5A">Example 5(a) : IdClass -- IdClass</h3>
+The parent entity uses IdClass. The dependent's primary key class is of same type as that of the par-
+ent entity and
+the dependent entity uses IdClass:
+<img src="DerivedIdentities/JPA_Ex5a.png" caption="" />
+<img src="DerivedIdentities/DB_Ex5a.png" caption="" />
+
+<h3 id="E5B">Example 5(b) : IdClass -- EmbeddedId</h3>
+The parent entity uses IdClass. The dependent's primary key class is of same type as that of the par-
+ent entity and
+the dependent entity uses the EmbeddedId and MapsId annotations. The PersonId
+class needs to be annotated Embeddable
+<img src="DerivedIdentities/JPA_Ex5b.png" caption="" />
+<img src="DerivedIdentities/DB_Ex5b.png" caption="" />
+
+<h3 id="E6A">Example 6(a) : EmbeddedId -- IdClass</h3>
+The parent entity uses EmbeddedId. The dependent's primary key is of the same type as that of the
+parent and
+The dependent class uses IdClass:
+<img src="DerivedIdentities/JPA_Ex6a.png" caption="" />
+<img src="DerivedIdentities/DB_Ex6a.png" caption="" />
+
+<h3 id="E6B">Example 6(b) : EmbeddedId -- EmbeddedId:</h3>
+The parent entity uses EmbeddedId. The dependent's primary key is of the same type as that of the
+parent and
+The dependent class uses EmbeddedId:
+<img src="DerivedIdentities/JPA_Ex6b.png" caption="" />
+<img src="DerivedIdentities/DB_Ex6b.png" caption="" />
