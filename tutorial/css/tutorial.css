@@ -15,12 +15,12 @@ padding: 0px;}
 #LOAD a {
 transition: all 0.17s ease-in-out;
 }
-#LOAD a:link,#LOAD a:visited {
+#LOAD a:not("[data-toggle]"):link ,#LOAD a:not("[data-toggle]"):visited {
 color: #f34246;
 text-decoration: underline;
 outline: none;
 }
-#LOAD a:hover {
+#LOAD a:not("[data-toggle]"):hover {
 color: #FE7C6D;
 text-decoration: none;
 outline: none;
