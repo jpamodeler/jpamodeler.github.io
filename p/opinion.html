@@ -1,0 +1,73 @@
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="page-header">Testimonial</h2>
+                        <div class="testimonial">
+                            <div class="media">
+                                <div class="pull-left">
+                                    <a href="#"><img src="images/home/profile1.png" alt=""></a>
+                                </div>
+                                <div class="media-body">
+                                    <blockquote>Nisi commodo bresaola, leberkas venison eiusmod bacon occaecat labore tail.</blockquote>
+                                    <h3><a href="#">- Jhon Kalis</a></h3>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-right">
+                                    <a href="#"><img src="images/home/profile2.png" alt=""></a>
+                                </div>
+                                <div class="media-body">
+                                    <blockquote>Capicola nisi flank sed minim sunt aliqua rump pancetta leberkas venison eiusmod.</blockquote>
+                                    <h3><a href="">- Abraham Josef</a></h3>
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script>
+    $(document).ready(function () {
+        $("#output").children("div").each(function () {
+            var container = $(this);
+            $.ajax({
+                url: 'https://api.twitter.com/1/statuses/oembed.json?id=' + container.attr("id") + '&align=center&callback=?',
+                dataType: 'json',
+                success: function (data) {
+                    $(data.html).appendTo(container);
+                }
+            });
+        });
+    });
+</script>
+
+<div id="output">
+    <div id="439421687566970880"></div>
+    <div id="470946346829348865"></div>
+    <div id="449115506357067776"></div>
+    <div id="725684324406857728"></div>
+    <div id="723781396800659456"></div>
+    <div id="717798397646864384"></div>
+    <div id="728445466749231105"></div>
+    <div id="582231180747141122"></div>
+    <div id="514466679976624128"></div>
+    <div id="673887422384488449"></div>
+</div>
+
+<!--<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fezbyte%2Fposts%2F274783566028855&width=500" width="500" height="329" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>-->
+<!--<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FNetBeans%2Fposts%2F562827357165408&width=500" width="500" height="441" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>-->
