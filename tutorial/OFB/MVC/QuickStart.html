@@ -49,13 +49,13 @@ The requirements for this tutorial are:
     <li>Java 1.8</li>
     <li>NetBeans 8.1</li>
     <li>JPA Modeler 1.5.5</li>
-    <li>GlassFish 4.1</li>
+    <li>GlassFish 4.1 / Payara 4.1</li>
     <li>Ozark 1.0.0-m02</li>
 </ol>
 Although Java EE 8 is not yet released, it is possible to use MVC framework already in some Java EE 7 servers, 
 as the reference implementation of the <a href="https://jcp.org/en/jsr/detail?id=371" >MVC specification</a> named 
 <a href="Ozark" >Ozark</a> is complete.
-Ozark is currently not part of <a href="https://glassfish.java.net/download.html" >GlassFish</a>, 
+Ozark is currently not part of <a href="https://glassfish.java.net/download.html" >GlassFish</a> / <a href="http://www.payara.fish/">Payara</a>,
 so the scope must be set to runtime in <b>pom.xml</b> with maven dependencies to ensure it is bundled with your application 
 <i>(as shown in next section)</i>.
 
@@ -338,7 +338,6 @@ the Customer Entity.-->
         <li>Date type support</li>
         <li>Embeddable</li>
         <li>Relationship</li>
-        <li>Bean Validation Reverse Engineering</li>
     </ul>
 </div>
 
