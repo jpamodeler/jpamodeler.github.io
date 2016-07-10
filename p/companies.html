@@ -2,24 +2,103 @@
 It's Open Source so it's impossible to have a complete list of who uses it. We have made this list from what people tell us, 
 and from resources available on the Internet (conferences, GitHub tickets, Contact emails etc).
 
-If you want to add a company to the list, please <a href="https://docs.google.com/forms/d/1ZcVNqbHOXOasMq-LcGKhps7_4rCMDE6O5Y9ZE3boBkY/viewform?c=0&w=1"
-                                                    target="_blank" >Fill up this form.</a>
-<ul>
-    <li>http://versifit.com/</li>
-    <li>https://www.t-systems.com</li>
-    <li>http://www.inteacc.com/</li>
-    <li>http://www.norwich.edu/</li>
-    <li>http://www.furore.com</li>
-    <li>http://kode-labs.com/</li>
-    <li>http://www.axa.com</li>
-    <li>http://www.pandatech.co.il</li>
-    <li>http://iproduct.org</li>
-    <li>http://www.misena.edu.co/</li>
-    <li>https://www.groupbuilder.fi</li>
-    <li>http://www.soshardandsoft.com/</li>
-    <li>http://www.qq.com/</li>
-    <li>http://ariahgroup.org/</li>
-    <li>http://fixner.com</li>
-    <li>http://i2e.es</li>
-    <li>http://www.vendavo.com/</li>
-</ul>
+If you want to add a company to the list, please 
+<a href="page.html?l=p/register_company" target="_blank" >Fill up this form.</a>
+
+<script>
+    var companies_data = [
+        {name: 'verifit', logo: "images/portfolio/1.jpg", url: 'http://versifit.com'},
+        {name: 'verifit', logo: "images/portfolio/1.jpg", url: 'http://versifit.com'},
+        {name: 'verifit', logo: "images/portfolio/1.jpg", url: 'http://versifit.com'},
+        {name: 'verifit', logo: "images/portfolio/1.jpg", url: 'http://versifit.com'},
+        {name: 'verifit', logo: "images/portfolio/1.jpg", url: 'http://versifit.com'},
+        {name: 'verifit', logo: "images/portfolio/1.jpg", url: 'http://versifit.com'},
+        {name: 'verifit', logo: "images/portfolio/1.jpg", url: 'http://versifit.com'},
+        {name: 'verifit', url: 'http://versifit.com'},
+        {name: 'verifit', url: 'http://versifit.com'},
+        {name: 'verifit', url: 'http://versifit.com'},
+        {name: 'verifit', url: 'http://versifit.com'}
+//    https://www.t-systems.com
+//    http://www.inteacc.com
+//    http://www.norwich.edu
+//    http://www.furore.com
+//    http://kode-labs.com
+//    http://www.axa.com
+//    http://www.pandatech.co.il
+//    http://iproduct.org
+//    http://www.misena.edu.co
+//    https://www.groupbuilder.fi
+//    http://www.soshardandsoft.com
+//    http://www.qq.com
+//    http://ariahgroup.org
+//    http://fixner.com
+//    http://i2e.es
+//    http://www.vendavo.com
+    ];
+    debugger;
+    for (i in companies_data) {
+        var company = companies_data[i];
+        if (company.logo == null) {
+            $("#COMPANIES_RAW").append($("<li>").append($("<a>").attr("href", company.url).text(company.name)))
+        } else {
+            var companyTemp = $("#COMPANT_TEMPLATE").clone().attr("id", "").css("display", "block");
+            $("#COMPANIES").append(companyTemp);
+            companyTemp.find(".img-responsive").attr("src", company.logo).attr("alt", company.name)
+            companyTemp.find(".portfolio-view ul li:nth-child(2) a").attr("href", company.url);
+            companyTemp.find(".portfolio-view ul li:nth-child(1) a").attr("href", company.url);
+            companyTemp.find(".portfolio-info h2").text(company.name);
+        }
+    }
+</script>
+
+<section id="portfolio">
+    <div class="container padding">
+        <div class="row">
+
+            <div id="COMPANIES">
+                <div id="COMPANT_TEMPLATE" style="display: none" class="col-xs-4 col-sm-3 col-md-2 portfolio-item branded logos">
+                    <div class="portfolio-wrapper">
+                        <div class="portfolio-single">
+                            <div class="portfolio-thumb">
+                                <img src="images/portfolio/1.jpg" class="img-responsive" alt="">
+                            </div>
+                            <div class="portfolio-view">
+                                <ul class="nav nav-pills">
+                                    <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
+                                    <li><a href="images/portfolio/1.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="portfolio-info ">
+                            <h2>${name}</h2>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4>Other companies</h4>
+                    <ul id="COMPANIES_RAW" ></ul> 
+                </div>
+            </div>
+            <!--                <div class="portfolio-pagination">
+                                <ul class="pagination">
+                                  <li><a href="#">left</a></li>
+                                  <li><a href="#">1</a></li>
+                                  <li><a href="#">2</a></li>
+                                  <li class="active"><a href="#">3</a></li>
+                                  <li><a href="#">4</a></li>
+                                  <li><a href="#">5</a></li>
+                                  <li><a href="#">6</a></li>
+                                  <li><a href="#">7</a></li>
+                                  <li><a href="#">8</a></li>
+                                  <li><a href="#">9</a></li>
+                                  <li><a href="#">right</a></li>
+                                </ul>
+                            </div>-->
+        </div>
+    </div>
+</section>
+<!--/#portfolio-->
