@@ -7,35 +7,23 @@ If you want to add a company to the list, please
 
 <script>
     var companies_data = [
-        {name: 'verifit', logo: "images/portfolio/1.jpg", url: 'http://versifit.com'},
-        {name: 'verifit', logo: "images/portfolio/1.jpg", url: 'http://versifit.com'},
-        {name: 'verifit', logo: "images/portfolio/1.jpg", url: 'http://versifit.com'},
-        {name: 'verifit', logo: "images/portfolio/1.jpg", url: 'http://versifit.com'},
-        {name: 'verifit', logo: "images/portfolio/1.jpg", url: 'http://versifit.com'},
-        {name: 'verifit', logo: "images/portfolio/1.jpg", url: 'http://versifit.com'},
-        {name: 'verifit', logo: "images/portfolio/1.jpg", url: 'http://versifit.com'},
-        {name: 'verifit', url: 'http://versifit.com'},
-        {name: 'verifit', url: 'http://versifit.com'},
-        {name: 'verifit', url: 'http://versifit.com'},
-        {name: 'verifit', url: 'http://versifit.com'}
-//    https://www.t-systems.com
-//    http://www.inteacc.com
-//    http://www.norwich.edu
-//    http://www.furore.com
-//    http://kode-labs.com
-//    http://www.axa.com
-//    http://www.pandatech.co.il
-//    http://iproduct.org
-//    http://www.misena.edu.co
-//    https://www.groupbuilder.fi
-//    http://www.soshardandsoft.com
-//    http://www.qq.com
-//    http://ariahgroup.org
-//    http://fixner.com
-//    http://i2e.es
-//    http://www.vendavo.com
+        {logo: "p/images/companies/axa.svg", width: '95%', url: 'http://axa.com'},
+        {logo: "p/images/companies/t-systems.png", width: '80%', paddingtop: '14px', url: 'http://t-systems.com'},
+        {logo: "p/images/companies/versifit.png", width: '78%',paddingtop: '14px', url: 'http://versifit.com'},
+        {logo: "p/images/companies/vendavo.jpg", width: '72%',paddingtop: '8px', url: 'http://www.vendavo.com'},
+        {logo: "p/images/companies/cognizant.png", width: '68%',paddingtop: '4px', url: 'http://www.cognizant.com'},
+        {logo: "p/images/companies/fixner.png", width: '59%', url: 'http://fixner.com'},
+        {logo: "p/images/companies/inteacc.gif", width: '59%', url: 'http://inteacc.com'},
+        {name: "norwich", url: 'http://norwich.edu'},
+        {name: "Furore", url: 'http://furore.com'},
+        {name: "SOS HARD & SOFT", url: 'http://soshardandsoft.com/'},
+        {name: 'Kode Labs', url: 'http://kode-labs.com'},
+        {name: 'iProduct', url: 'http://iproduct.org'},
+        {name: 'Misena', url: 'http://www.misena.edu.co'},
+        {name: 'Group Builder', url: 'https://www.groupbuilder.fi'},
+        {name: 'Ariah Group', url: 'http://ariahgroup.org'},
+        {name: 'I2E', url: 'http://i2e.es'}
     ];
-    debugger;
     for (i in companies_data) {
         var company = companies_data[i];
         if (company.logo == null) {
@@ -43,62 +31,28 @@ If you want to add a company to the list, please
         } else {
             var companyTemp = $("#COMPANT_TEMPLATE").clone().attr("id", "").css("display", "block");
             $("#COMPANIES").append(companyTemp);
-            companyTemp.find(".img-responsive").attr("src", company.logo).attr("alt", company.name)
-            companyTemp.find(".portfolio-view ul li:nth-child(2) a").attr("href", company.url);
-            companyTemp.find(".portfolio-view ul li:nth-child(1) a").attr("href", company.url);
-            companyTemp.find(".portfolio-info h2").text(company.name);
+            companyTemp.find(".img-responsive").attr("src", company.logo)
+                    .attr("alt", company.name).css("width", company.width).css("padding-top", company.paddingtop)
+                    .parent().attr("href", company.url);
         }
     }
 </script>
 
-<section id="portfolio">
-    <div class="container padding">
+<section>
+    <div class="container">
+        <div id="COMPANIES" class="row padding">
+                <div id="COMPANT_TEMPLATE" style="display: none;width:280px;height:85px" class="col-xs-4 col-sm-4 col-md-3">
+                    <a style="cursor: pointer" target="_blank" href="#">
+                        <img src="#" class="img-responsive" alt="">
+                    </a>
+                </div>
+        </div>
+
         <div class="row">
-
-            <div id="COMPANIES">
-                <div id="COMPANT_TEMPLATE" style="display: none" class="col-xs-4 col-sm-3 col-md-2 portfolio-item branded logos">
-                    <div class="portfolio-wrapper">
-                        <div class="portfolio-single">
-                            <div class="portfolio-thumb">
-                                <img src="images/portfolio/1.jpg" class="img-responsive" alt="">
-                            </div>
-                            <div class="portfolio-view">
-                                <ul class="nav nav-pills">
-                                    <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
-                                    <li><a href="images/portfolio/1.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="portfolio-info ">
-                            <h2>${name}</h2>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="col-xs-12">
+                <h4>Other companies</h4>
+                <ul id="COMPANIES_RAW" ></ul> 
             </div>
-
-            <div class="row">
-                <div class="col-xs-12">
-                    <h4>Other companies</h4>
-                    <ul id="COMPANIES_RAW" ></ul> 
-                </div>
-            </div>
-            <!--                <div class="portfolio-pagination">
-                                <ul class="pagination">
-                                  <li><a href="#">left</a></li>
-                                  <li><a href="#">1</a></li>
-                                  <li><a href="#">2</a></li>
-                                  <li class="active"><a href="#">3</a></li>
-                                  <li><a href="#">4</a></li>
-                                  <li><a href="#">5</a></li>
-                                  <li><a href="#">6</a></li>
-                                  <li><a href="#">7</a></li>
-                                  <li><a href="#">8</a></li>
-                                  <li><a href="#">9</a></li>
-                                  <li><a href="#">right</a></li>
-                                </ul>
-                            </div>-->
         </div>
     </div>
 </section>
-<!--/#portfolio-->
