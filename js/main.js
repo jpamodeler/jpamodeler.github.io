@@ -118,6 +118,10 @@ jQuery(function($) {'use strict';
 			backgroundColor: '#3e8bff',
 		});
 	}
+        
+    //Load header and footer    
+    $("#header").load("component/header.html");
+    $("#footer").load("component/footer.html");
 
 });
 

@@ -88,7 +88,7 @@ h3{
 .action-block .title {
     color: whitesmoke;
     font-family: Pacifico, cursive;
-    
+
 }
 
 .action-block .btn-common {
@@ -249,8 +249,8 @@ h3{
     color:#ff4444;
 }
 ul li .fa-youtube-play {
-       color:#ff8888;
-       padding-left: 2px;
+    color:#ff8888;
+    padding-left: 2px;
 }
 /*.social-icons ul li a:hover .fa-bug {
     color:#ff3333;
@@ -407,13 +407,14 @@ ul.sub-menu {
 **************************/
 
 #footer {
-    /* padding-bottom: 36px; */
+     padding: 10px 0px; 
     /* background-image: url(../images/modeler/footer/footer.png); */
     /* background-repeat: repeat-x; */
     background-position: bottom;
     background-size: contain;
     background-color: #3572b0;
     bottom: 0px;
+    margin-top: 30px;
 }
 
 #footer h1{
@@ -1953,8 +1954,8 @@ Blog with right sidebar
 
 .blog-pagination {
     text-align: center;
-/*    padding-top: 10px;
-    padding-bottom: 55px;*/
+    /*    padding-top: 10px;
+        padding-bottom: 55px;*/
 }
 
 /*****************************
@@ -2949,7 +2950,9 @@ span.stButton_gradient,
     padding-right:0% !important;
     padding-left: 5% !important;}
 
+
+/** Custom css */
 /*Footer*/
 footer .social-icons a {
-                            float: right;
-                        }
+    float: right;
+}
