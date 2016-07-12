@@ -73,30 +73,30 @@ To create an IDE project:
 <ul>
     <li>Start NetBeans IDE.</li>
     <li>In the IDE, choose <b>File > New Project(Ctrl-Shift-N) from the main menu</b>, as shown in the figure below :
-        <img src="QuickStart/1.png" caption="create New Project" />
+        <img src="tutorial/OFB/MVC/QuickStart/1.png" caption="create New Project" />
     </li>
     <li>In the New Project wizard, expand the <b>Maven</b> category and select <b>Web Application</b> as shown in the figure below. Then click Next.
-        <img src="OFB/MVC/QuickStart/PROJECT_CAT.png" caption="choose Project" />
+        <img src="tutorial/OFB/MVC/QuickStart/PROJECT_CAT.png" caption="choose Project" />
     </li>
     <li>Enter <b>ShoppingSystem</b> in the Project name text box and specify the Project Location to any directory on your computer and click next (as shown in the figure below):
-        <img src="OFB/MVC/QuickStart/PROJECT_SETUP1.png" caption="choose Name and Location" />
+        <img src="tutorial/OFB/MVC/QuickStart/PROJECT_SETUP1.png" caption="choose Name and Location" />
     </li>
     <li>Select the version of Java EE you want to use with your application and 
         the server to which you want to deploy your application.
-        <img src="OFB/MVC/QuickStart/PROJECT_SETUP2.png" caption="choose Project" />
+        <img src="tutorial/OFB/MVC/QuickStart/PROJECT_SETUP2.png" caption="choose Project" />
     </li>
     <li>Click Finish.</li>
     <li>The project is created and opened in the IDE. Now, add the maven dependency of Ozark in <b>pom.xml</b>.
-        <img src="OFB/MVC/QuickStart/POM.png" caption="add dependencies in pom.xml" />
+        <img src="tutorial/OFB/MVC/QuickStart/POM.png" caption="add dependencies in pom.xml" />
         <script src="https://gist.github.com/jGauravGupta/b26ba5ed8e6fc28bbc6fbc9a3320cdfe.js"></script>
     </li>
     <li>Right click on the project node > <b>Build with Dependencies</b>.
-        <img src="OFB/MVC/QuickStart/BUILD_DEPENDENCY.png" caption="" />
+        <img src="tutorial/OFB/MVC/QuickStart/BUILD_DEPENDENCY.png" caption="" />
     </li>
     <li>
         Now, You should see the Projects window, which contains a tree view of the components of the project, 
         libraries that your code depends on, and so on.
-        <img src="OFB/MVC/QuickStart/PROJECT_STRUCT.png" caption="Project structue" />
+        <img src="tutorial/OFB/MVC/QuickStart/PROJECT_STRUCT.png" caption="Project structue" />
         That's all what is needed to set up the project. You are now ready to use new MVC framework with Java EE!
     </li>
 </ul>
@@ -105,17 +105,17 @@ To create an IDE project:
 <h3 id="CD">Create the JPA Diagram :</h3>
 <ol style="text-align: left;">
     <li>Goto <b>File menu &gt; New File &gt; Persistence category</b>.
-        <img src="QuickStart/8.png" caption="create New File" />
+        <img src="tutorial/OFB/MVC/QuickStart/8.png" caption="create New File" />
     </li>
     <li>From the Persistence , select <b>JPA Diagram</b> and click <b>Next</b>.
-        <img src="OFB/MVC/QuickStart/JPAM_CAT.png" caption="Select JPA Diagram" />
+        <img src="tutorial/OFB/MVC/QuickStart/JPAM_CAT.png" caption="Select JPA Diagram" />
     </li>
     <li>Type <b>CartModel</b> for the diagram name and <b>Browse</b> the location in project.
-        <img src="OFB/MVC/QuickStart/JPAM_SETUP.png" caption="enter Dagram name" />
+        <img src="tutorial/OFB/MVC/QuickStart/JPAM_SETUP.png" caption="enter Dagram name" />
     </li>
     <li>Click <b>Finish</b>.</li>
     <li>When you click Finish, the IDE creates the JPA Diagram and opens the diagram in the designer window.
-        <img src="OFB/MVC/QuickStart/DIA_OPEN.png" caption="Diagram opened" />
+        <img src="tutorial/OFB/MVC/QuickStart/DIA_OPEN.png" caption="Diagram opened" />
     </li>
 </ol>
 
@@ -123,10 +123,10 @@ To create an IDE project:
 <ol style="text-align: left;">
     <li>Drag &amp; Drop the <b>Entity</b> <entity></entity> from the Palette window to designer. 
     <img src="NamedEntityGraph/pal.JPG" caption="Palette" />
-    <img src="OFB/MVC/QuickStart/DRAG_ENTITY.png" caption="drag Entity" />
+    <img src="tutorial/OFB/MVC/QuickStart/DRAG_ENTITY.png" caption="drag Entity" />
 </li>
 <li>Double click on the Entity <entity></entity> and rename to <b>Customer</b>.
-<img src="OFB/MVC/QuickStart/RENAME_ENTITY.png" caption="rename Entity" />
+<img src="tutorial/OFB/MVC/QuickStart/RENAME_ENTITY.png" caption="rename Entity" />
 </li>
 </ol>
 
@@ -135,41 +135,41 @@ To create an IDE project:
 
     <li>To create <b><code>@Basic</code> attribute</b>, click on the <b>Customer Entity </b> <entity></entity> , 
     then click on the expand <add-attr></add-attr>  button &gt; basic <basic></basic> property.
-    <img src="OFB/MVC/QuickStart/BASIC_ATTR.png" caption="add @Basic" />
+    <img src="tutorial/OFB/MVC/QuickStart/BASIC_ATTR.png" caption="add @Basic" />
 </li>
 <li>
     Validation annotations like <b>@Size, @NotNull</b> and so on can be added to the respective entity fields by using 
     <b>JPA Modeler Diagram > property panel > bean validation</b>. 
     As shown below :
-    <img src="OFB/MVC/QuickStart/BV.png" caption="Bean Validation" />
+    <img src="tutorial/OFB/MVC/QuickStart/BV.png" caption="Bean Validation" />
 </li>
 <li>Same as above create some other entities and properties (for more information <a href="page.html?l=QuickStart" target="_blank">click here</a>).
-    <img src="OFB/MVC/QuickStart/FINAL_DIA.png" caption="Final Diagram" />
+    <img src="tutorial/OFB/MVC/QuickStart/FINAL_DIA.png" caption="Final Diagram" />
 </li>
 </ol>
 
 <h3 id="GEN">Generate the entity classes :</h3>
 <ul style="text-align: left;">
     <li>Right click on the <b>diagram &gt; Generate Source Code</b> or <b>(ctrl + G)</b>
-        <img src="OFB/MVC/QuickStart/GEN_SRC.png" caption="Generate Source Code" />
+        <img src="tutorial/OFB/MVC/QuickStart/GEN_SRC.png" caption="Generate Source Code" />
     </li>
     <li><h4 id="BU">Business Service :</h4>
         Click on the <b>Business Service &gt; select Session Facade</b>.
-        <img src="OFB/MVC/QuickStart/BUSINESS_SERVICE.png" caption="" />
+        <img src="tutorial/OFB/MVC/QuickStart/BUSINESS_SERVICE.png" caption="" />
 
         In the following screen, you can configure the <b>SessionBean package</b> and <b>class name pattern</b> for the EJB facade 
         that will be created for your application:
-        <img src="OFB/MVC/QuickStart/SESSION.png" caption="" />
+        <img src="tutorial/OFB/MVC/QuickStart/SESSION.png" caption="" />
     </li>
     <li>
         <h4 id="CO">MVC Controller :</h4>
         Click on the <b>Controller &gt; select MVC 1.0</b>
-        <img src="OFB/MVC/QuickStart/CONTROLLER.png" caption="" />
+        <img src="tutorial/OFB/MVC/QuickStart/CONTROLLER.png" caption="" />
         <h5>Implement the Controller:</h5>
 
         In the following screen, you can configure the <b>Controller package</b> and <b>class name pattern</b> for the MVC 1.0 
         that will be created for your application:
-        <img src="OFB/MVC/QuickStart/MVC.png" caption="" />
+        <img src="tutorial/OFB/MVC/QuickStart/MVC.png" caption="" />
 
         A simple Java EE MVC Controller looks like this:<br/>
         <script src="https://gist.github.com/jGauravGupta/df4a668e1949eaf985f96dbb5b7cc6fb.js"></script>
@@ -185,13 +185,13 @@ To create an IDE project:
             </li>
         </ol>
         You can make it Hybrid class by enabling following option :
-        <img src="OFB/MVC/QuickStart/HYBRID.png" caption="" />
+        <img src="tutorial/OFB/MVC/QuickStart/HYBRID.png" caption="" />
 
         <h5>Return types</h5>
         There are lots of different return types when working with @Controller methods or classes.
         A controller’s method return type determines how its result is processed.
         In the following screen, you can define the Controllers return type:
-        <img src="OFB/MVC/QuickStart/RETURN_TYPE.png" caption="Return Types" />
+        <img src="tutorial/OFB/MVC/QuickStart/RETURN_TYPE.png" caption="Return Types" />
 
         <ol>
             <li><h6>void:</h6> A controller method that returns <code>void</code> is REQUIRED to be annotated with the <code>@View</code> annotation.
@@ -219,7 +219,7 @@ To create an IDE project:
         <h5>Security :</h5>
         Guarding against malicious attacks is a great concern for web application developers. Two of the most common
         forms of attacks <b>cross-site request forgery (CSRF)</b> and <b>cross-site scripting (XSS)</b> can prevented by following option :
-        <img src="OFB/MVC/QuickStart/Security.png" caption="security constrains" />
+        <img src="tutorial/OFB/MVC/QuickStart/Security.png" caption="security constrains" />
 
         <!--More details about security will be available in MVC 1.0 security chapter.-->
 
@@ -229,7 +229,7 @@ To create an IDE project:
         occur while processing a request. This mechanism is based on CDI events that 
         can be <b>fired by implementations and observed by applications</b>.
 
-        <img src="OFB/MVC/QuickStart/EVENT.png" caption="Event listener" />
+        <img src="tutorial/OFB/MVC/QuickStart/EVENT.png" caption="Event listener" />
 
         Observing events can be useful for applications to learn about the lifecycle of a request, perform logging,
         monitor performance etc.<br/>
@@ -245,7 +245,7 @@ To create an IDE project:
         (which has to be used to handle validation errors) as a property in the controller class
         and add error handling to the controller method by using the injected <b>BindingResult</b> reference.
 
-        <img src="OFB/MVC/QuickStart/BV2.png" caption="" />
+        <img src="tutorial/OFB/MVC/QuickStart/BV2.png" caption="" />
 
         <script src="https://gist.github.com/jGauravGupta/4f8d276182edae09845dba83974d2d00.js"></script>
         <!--if the BindingResult contains errors by calling the isFailed() method. 
@@ -257,8 +257,8 @@ To create an IDE project:
         The subclass of <code>javax.ws.rs.core.Application</code> can be used to define additional JAX-RS components.
         In the following screen, you can configuration <code>@ApplicationPath</code> 
         (that define the base path for our application) and class name.
-        <img src="OFB/MVC/QuickStart/APP_CONG_ACTION.png" caption="click here to update application config" />
-        <img src="OFB/MVC/QuickStart/ApplicationConfig.png" caption="configure application path" />
+        <img src="tutorial/OFB/MVC/QuickStart/APP_CONG_ACTION.png" caption="click here to update application config" />
+        <img src="tutorial/OFB/MVC/QuickStart/ApplicationConfig.png" caption="configure application path" />
     </li>
     <li>
         <h4 id="VI">Viewer :</h4>
@@ -266,59 +266,59 @@ To create an IDE project:
         Why? Because it is so easy to integrate any view technologies with MVC. 
         <br/>
         Click on the Viewer &gt; select JSP &gt; 
-        <img src="OFB/MVC/QuickStart/VIEWER.png" caption="" />
+        <img src="tutorial/OFB/MVC/QuickStart/VIEWER.png" caption="" />
         In this tutorial, NetBeans will generate a set of JSP pages (create.jsp, update.jsp, list.jsp and view.jsp) that are used to handle every possible scenario.
         <br/>
         In the following screen, you can configure the <b>JSP template location</b> inside the web project and you can also define whether the
         script and style-sheet files (Twitter Bootstrap, jQuery etc.) should be <b>offline or online</b>(cdnjs) :
-        <img src="OFB/MVC/QuickStart/JSP.png" caption="" />
+        <img src="tutorial/OFB/MVC/QuickStart/JSP.png" caption="" />
 
     </li>
     <li>
         Now, click on the <b>Generate</b> button.
-        <img src="OFB/MVC/QuickStart/GEN_SRC_LOG.png" caption="" />
+        <img src="tutorial/OFB/MVC/QuickStart/GEN_SRC_LOG.png" caption="" />
     </li>
 </ul>
 
 <h3 id="INSP">Inspecting The Generated Code :</h3>
 NetBeans will generate multiple files under source packages and under Web Pages.
 Here is a break-down of what was created:
-<img src="OFB/MVC/QuickStart/GEN_SRC_WEB.png" caption="under web page" />
+<img src="tutorial/OFB/MVC/QuickStart/GEN_SRC_WEB.png" caption="under web page" />
 
 Java source structure of this project seems like below.
-<img src="OFB/MVC/QuickStart/GEN_SRC_JAVA.png" caption="under java source" />
+<img src="tutorial/OFB/MVC/QuickStart/GEN_SRC_JAVA.png" caption="under java source" />
 
 <!--The expected outcome will be a Java EE 8 application which uses an EJB facade to mediate the requests with the Model class,
 the Customer Entity.-->
 <h3 id="DEP">Deploy :</h3>
 <ul>
     <li>Clean and build your project. 
-        <img src="OFB/MVC/QuickStart/CLEAN_BUILD.png" caption="" />
+        <img src="tutorial/OFB/MVC/QuickStart/CLEAN_BUILD.png" caption="" />
     </li>
     <li>Now we are ready to run application. Right-Click on project > Run :
-        <img src="OFB/MVC/QuickStart/RUN.png" caption="Deploying Project..." />
+        <img src="tutorial/OFB/MVC/QuickStart/RUN.png" caption="Deploying Project..." />
     </li>
 </ul>
 
 <h3 id="OP">Output :</h3>
 <ul>
     <li>Home page opened by NetBeans on after deployment.
-        <img src="OFB/MVC/QuickStart/APP_INIT.png" caption="Application home page" />
+        <img src="tutorial/OFB/MVC/QuickStart/APP_INIT.png" caption="Application home page" />
     </li>
     <li>
         Click on Product ui component (currently no data exist) :
-        <img src="OFB/MVC/QuickStart/EMPTY_TABLE.png" caption="Product data table" />
+        <img src="tutorial/OFB/MVC/QuickStart/EMPTY_TABLE.png" caption="Product data table" />
     </li>
     <li> Click on Add+ button to create new Product :
-        <img src="OFB/MVC/QuickStart/CREATE_PRODUCT.png" caption="create new Product" />
+        <img src="tutorial/OFB/MVC/QuickStart/CREATE_PRODUCT.png" caption="create new Product" />
     </li>
     <li>
         Product created and returned to data table :
-        <img src="OFB/MVC/QuickStart/DATA_TABLE.png" caption="Data Table" />
+        <img src="tutorial/OFB/MVC/QuickStart/DATA_TABLE.png" caption="Data Table" />
     </li>
     <li>
         Same as above create another Product and Customer entry and move to Home Page by Dashboard :
-        <img src="OFB/MVC/QuickStart/CHART.png" caption="Visualize data" />
+        <img src="tutorial/OFB/MVC/QuickStart/CHART.png" caption="Visualize data" />
     </li>
 </ul>
 

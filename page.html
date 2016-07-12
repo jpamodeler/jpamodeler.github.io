@@ -178,12 +178,13 @@
             padding: 0px 10px 0px 0px;
         } 
     </style>
-    <div class = "row" id="TABLE_TEMPLATE" style="display: none;">
-        <div class = "col-centered">
-            <div id="LINK" class = "thumbnail">
-                <a data-lightbox="example-set"><img/></a>
-            </div>
-            <div class = "caption"><p id="CAPTION"></p></div>
+    <div class="IMG_CONTAINER" id="TABLE_TEMPLATE" style="display: none;">
+        <a data-lightbox="example-set" style="margin: 4px auto 0 auto;display: table;">
+            <img class="IMG img-thumbnail img-responsive"/>
+        </a>
+        <div class = "caption">
+            <p class="IMG_CAPTION">
+            </p>
         </div>
     </div>   
     <script>
@@ -191,31 +192,38 @@
             $("img[caption]").each(function () {
                 var img = $(this);
                 var table = $("#TABLE_TEMPLATE").clone().attr("id", "").show();
-                table.find("#LINK a img").attr("src", img.attr("src")).attr("alt", img.attr("caption")).attr("style", img.attr("style"));
-                table.find("#LINK a").attr("href", img.attr("src"));
-                table.find("#CAPTION").html(img.attr("caption"));
+                table.find("a[data-lightbox] img").attr("src", img.attr("src")).attr("alt", img.attr("caption")).attr("style", img.attr("style"));
+                table.find("a[data-lightbox]").attr("href", img.attr("src"));
+                table.find("p.IMG_CAPTION").html(img.attr("caption"));
+                if (img.hasClass("NO_BORDER_IMG")) {
+                    table.find("a[data-lightbox] img").removeClass("IMG");
+                }
                 img.replaceWith(function () {
                     return table;
                 })
             });
         }
-
-//            $("$LOAD li").each(function (){
-//                $(this).addClass("wow fadeInUp").attr("data-wow-duration","900ms").attr("data-wow-delay","100ms");
-//            });
     </script>
     <style>
-        #CAPTION{
+        .IMG_CAPTION{
             text-align: center;
             margin-bottom: 20px;
             color:#666666;
         }
-        #CAPTION:hover{
+        .IMG_CAPTION:hover{
             color:#555555;
         }
-        #LINK {
+        .IMG_CONTAINER {
             margin-bottom: 0px;
             border: none;
+        }
+        .IMG {
+            background: rgba(234, 233, 222, 0.21);
+            background-clip: padding-box;
+            border: 5px solid rgba(255,255,255,.2);
+            border-radius: 3px;
+            box-shadow: 0 0 2px rgba(255,255,255,.1), /* Bright outer highlight */ 0 0 6px rgba(0, 0, 0, 0.4), /* Outer shadow */ 0px 0px 0 rgba(0,0,0,.5) inset, /* Inner shadow (top + left) */ 0px 0px 0 rgba(0,0,0,.5) inset;
+            padding: 2px 2px 2px 2px;
         }
     </style>
 
