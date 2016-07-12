@@ -78,18 +78,20 @@ h3{
     padding: 10px 25px;
 }
 
-#action .col-sm-5{
+.action-block .col-sm-5{
     position: absolute;
 
     top: 0;
     height: 100%;
     right: 0;
 }
-#action .title {
-    color: white;
+.action-block .title {
+    color: whitesmoke;
+    font-family: Pacifico, cursive;
+    
 }
 
-#action .btn-common {
+.action-block .btn-common {
     color: white;
     border: 1px solid white;
     /* margin-right: 11%; */
@@ -419,6 +421,13 @@ ul.sub-menu {
     margin-top: 36px;
 }
 
+#footer a{
+    color: white;
+}
+#footer h6{
+    color: #5dabfb;
+}
+
 #footer .bottom-separator {
     margin-bottom: 60px;
 }
@@ -544,7 +553,7 @@ ul.sub-menu {
 }
 
 .copyright-text a {
-    color: #3e848a
+    color: whitesmoke;
 }
 
 .copyright-text p {
@@ -847,7 +856,7 @@ body .preloader > i {
     margin-top: -24px;
 }
 
-#action {
+.action-block {
     /* background-image: url(../images/home/tour-bg.png); */
     background-color: #3572b0;
     background-repeat: repeat-x;
@@ -907,6 +916,7 @@ body .preloader > i {
 .title {
     color: #404040;
     font-weight: 300;
+    font-family: Pacifico, cursive;
 }
 
 .single-features {
@@ -951,7 +961,7 @@ body .preloader > i {
 *******About Us Page******
 **************************/
 
-#action , 
+.action-block , 
 #page-breadcrumb{
     position: relative;
 }
@@ -1943,8 +1953,8 @@ Blog with right sidebar
 
 .blog-pagination {
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 55px;
+/*    padding-top: 10px;
+    padding-bottom: 55px;*/
 }
 
 /*****************************
@@ -2938,3 +2948,8 @@ span.stButton_gradient,
 .take-tour .wow .row div {    
     padding-right:0% !important;
     padding-left: 5% !important;}
+
+/*Footer*/
+footer .social-icons a {
+                            float: right;
+                        }

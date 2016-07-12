@@ -404,7 +404,7 @@
     }
 
 
-    #action.responsive{
+    .action-block.responsive{
         height: 255px;
     }
 
@@ -736,6 +736,8 @@
         bottom: 281px;
         /* transform: rotate(-90deg); */
     }
+    
+    
 }
 
 @media only screen and (max-width : 400px) {
@@ -745,7 +747,7 @@
         display: none;
     }
     
-    #DEMO_CONTAINER{
+    #rocket_tour{
         display: none;
     }
     #home-slider .main-slider {

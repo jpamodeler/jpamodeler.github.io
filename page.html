@@ -12,6 +12,9 @@
         <link href="css/lightbox.css" rel="stylesheet"> 
         <link href="css/main.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">
+        <link href="css/bootstrap-toc.css" rel="stylesheet" type="text/css">
+        <link href="css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+        <link href="css/sidebar.css" rel="stylesheet">
 
         <!--[if lt IE 9]>
                 <script src="js/html5shiv.js"></script>
@@ -23,22 +26,46 @@
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
     </head><!--/head-->
-    <body>
-        <header id="header">      
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 overflow">
-                   <div class="social-icons pull-right">
-                        <ul class="nav nav-pills">
-                            <li><a href="https://twitter.com/JPAModeler" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="https://youtube.com/JPAModeler" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                            <li><a href="https://github.com/jGauravGupta/jpamodeler" target="_blank"><i class="fa fa-github"></i></a></li>
-                            <li><a href="https://twitter.com/intent/tweet?text=%40JPAModeler%20%3C3" target="_blank"><i class="fa fa-heart"></i></a></li>
-                        </ul>
-                    </div> 
-                </div>
-             </div>
+
+
+
+    <body data-spy="scroll" data-target="#toc">
+
+
+        <div class="navbar navbar-static navbar-default navbar-fixed-bottom " style="width: 0px;">
+            <button type="button" class="navbar-toggle toggle-left /*hidden-md hidden-lg*/" data-toggle="sidebar" data-target=".sidebar-left" style="margin-left: 9px !important;">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-close" style="display: none;padding: 0px 4px 0px 0px;">
+                    <i class="fa fa-times fa-2x"></i>
+                </span>
+            </button>
+        </div> 
+        <div class="row">
+            <div class="col-xs-7 col-sm-3 col-md-3 sidebar sidebar-left sidebar-animate /*sidebar-md-show sidebar-lg-show*/" style="top:0">
+                <nav id="toc" ></nav>
+                <!--<nav id="toc" data-spy="affix" data-toggle="toc"  class="nav navbar-stacked" ></nav>-->
+            </div>
         </div>
+
+
+        <header id="header">      
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 overflow">
+                        <div class="social-icons pull-right">
+                            <ul class="nav nav-pills">
+                                <li><a href="https://twitter.com/JPAModeler" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://youtube.com/JPAModeler" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://github.com/jGauravGupta/jpamodeler" target="_blank"><i class="fa fa-github"></i></a></li>
+                                <li><a href="https://twitter.com/intent/tweet?text=%40JPAModeler%20%3C3" target="_blank"><i class="fa fa-heart"></i></a></li>
+                            </ul>
+                        </div> 
+                    </div>
+                </div>
+            </div>
             <div class="navbar navbar-inverse" role="banner">
                 <div class="container">
                     <div class="navbar-header">
@@ -55,7 +82,7 @@
 
                     </div>
                     <div class="collapse navbar-collapse">
-                               <ul class="nav navbar-nav navbar-right">
+                        <ul class="nav navbar-nav navbar-right">
                             <li class="active"><a href="index.html">Home</a></li>
                             <li><a target="_blank" href="https://www.youtube.com/JPAModeler">Demos <i class="fa fa-youtube-play"></i></a></li>
                             <li class="dropdown"><a href="#">Getting started <i class="fa fa-angle-down"></i></a>
@@ -91,7 +118,7 @@
                             </li>
                             <li><a target="_blank" href="p/contact.html">Contact Us</a></li>
                         </ul>
-                  </div>
+                    </div>
                 </div>
             </div>
         </header>
@@ -100,37 +127,38 @@
 
         <section id="features">
             <div class="container">
-                
+
                 <div class="row" id="LOAD">
 
-
+                    <div id="PAGE_CONTENT" class="main">
+                    </div>
                 </div>
             </div>
         </section>
-        
+
         <section id="PAGINATION_SECTION" style="display: none;">
             <div class="blog-pagination" >
-                        <ul class="pagination"></ul>
-                    </div>
+                <ul class="pagination"></ul>
+            </div>
         </section>
         <script>
-            function paginate(firstPage, lastPage){
+            function paginate(firstPage, lastPage) {
                 $("#PAGINATION_SECTION").css("display", "block");
-                if(firstPage==null){
+                if (firstPage == null) {
                     $(".pagination").append('<li class="active" style="display:none" ><a href="#" ></a></li>');
                 } else {
-                    $(".pagination").append('<li class="active" ><a style="cursor: pointer" href="'+firstPage+'" ></a></li>');
+                    $(".pagination").append('<li class="active" ><a style="cursor: pointer" href="' + firstPage + '" ></a></li>');
                 }
-                if(lastPage==null){
+                if (lastPage == null) {
                     $(".pagination").append('<li class="active" style="display:none" ><a href="#" ></a></li>');
                 } else {
-                    $(".pagination").append('<li class="active" ><a style="cursor: pointer" href="'+lastPage+'" ></a></li>');
+                    $(".pagination").append('<li class="active" ><a style="cursor: pointer" href="' + lastPage + '" ></a></li>');
                 }
             }
-            </script>
+        </script>
         <!--/#features-->
 
-                <footer id="footer">
+        <footer id="footer">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-3">
@@ -191,14 +219,14 @@
                                     <li class="m-b">
                                         <h6 class="text-uppercase" id="categories">Support</h6>
                                     </li>
-                                   <li class="text-muted"><a target="_blank" href="https://github.com/jGauravGupta/jpamodeler/issues">Report Issue</a></li>
-                                   <li class="text-muted"><a target="_blank" href="p/contact.html">Contact US</a></li>
+                                    <li class="text-muted"><a target="_blank" href="https://github.com/jGauravGupta/jpamodeler/issues">Report Issue</a></li>
+                                    <li class="text-muted"><a target="_blank" href="p/contact.html">Contact US</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
-                    
+
                 </div>
                 <div class="row" >
                     <div class="col-sm-4"></div>
@@ -228,42 +256,72 @@
         <script type="text/javascript" src="js/wow.min.js"></script>
         <script type="text/javascript" src="js/analytics.js"></script>
         <script type="text/javascript" src="js/main.js"></script>   
-        <script type="text/javascript" src="js/jquery.loadgist.js"></script>   
+        <script type="text/javascript" src="js/jquery.loadgist.js"></script> 
+        <script src="js/sidebar.js"></script>
+        <script src="js/bootstrap-toc.js"></script>
     </body>
 
 
     <script>
-        $(document).ready(function () {
-            var link = getUrlParameter('l');
-            $.ajax({
-                url: link + ".html",
-                dataType: "html",
-                success: function (content) {
-                    $('#LOAD').html(content);
-                    loadImage();
-                    $('#LOAD').loadGist();
-                    
-                },
-                error: function (jqXHR, textStatus, errorThrown) {
-                    console.log(textStatus, errorThrown);
-                }
+            $(document).ready(function () {
+                var link = getUrlParameter('l');
+                $.ajax({
+                    url: link + ".html",
+                    dataType: "html",
+                    success: function (content) {
+                        $('#PAGE_CONTENT').html(content);
+                        loadImage();
+                        loadTOC();
+                        loadTOCHead();
+
+                        $('#LOAD').loadGist();
+
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        console.log(textStatus, errorThrown);
+                    }
+                });
+
             });
+            var getUrlParameter = function getUrlParameter(sParam) {
+                var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                        sURLVariables = sPageURL.split('&'),
+                        sParameterName,
+                        i;
 
-        });
-        var getUrlParameter = function getUrlParameter(sParam) {
-            var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-                    sURLVariables = sPageURL.split('&'),
-                    sParameterName,
-                    i;
+                for (i = 0; i < sURLVariables.length; i++) {
+                    sParameterName = sURLVariables[i].split('=');
 
-            for (i = 0; i < sURLVariables.length; i++) {
-                sParameterName = sURLVariables[i].split('=');
-
-                if (sParameterName[0] === sParam) {
-                    return sParameterName[1] === undefined ? true : sParameterName[1];
+                    if (sParameterName[0] === sParam) {
+                        return sParameterName[1] === undefined ? true : sParameterName[1];
+                    }
                 }
+            };
+
+            function loadTOC() {
+                $(function () {
+                    var navSelector = '#toc';
+                    var $myNav = $(navSelector);
+                    Toc.init($myNav);
+                    $('body').scrollspy({
+                        target: navSelector
+                    });
+                });
             }
-        };
+
+            function loadTOCHead() {
+                $(function () {
+                    var navSelector = '#toc-head';
+                    var $myNav = $(navSelector);
+                    Toc.init($myNav);
+                    $('body').scrollspy({
+                        target: navSelector
+                    });
+                });
+            }
+
+
+
     </script>
     <link href="tutorial/css/tutorial.css" rel="stylesheet">
     <link href="tutorial/css/diictionary.css" rel="stylesheet">
@@ -274,47 +332,46 @@
         #header {
             padding: 0px 10px 0px 0px;
         } 
-        </style>
-        <div class = "row" id="TABLE_TEMPLATE" style="display: none;">
-            <div class = "col-centered">
-                <div id="LINK" class = "thumbnail">
+    </style>
+    <div class = "row" id="TABLE_TEMPLATE" style="display: none;">
+        <div class = "col-centered">
+            <div id="LINK" class = "thumbnail">
                 <a data-lightbox="example-set"><img/></a>
-                </div>
-                <div class = "caption"><p id="CAPTION"></p></div>
             </div>
-        </div>   
-        <script>
-            function loadImage(){
-                $("img[caption]").each(function(){
-                 var img = $(this);
-                 var table =  $("#TABLE_TEMPLATE").clone().attr("id","").show(); 
-                 table.find("#LINK a img").attr("src", img.attr("src")).attr("alt", img.attr("caption")).attr("style", img.attr("style")); 
-                 table.find("#LINK a").attr("href", img.attr("src")); 
-                 table.find("#CAPTION").html(img.attr("caption"));
-                 img.replaceWith(function(){
-                     return table;
-                 })
-                }); 
-            }
-            
+            <div class = "caption"><p id="CAPTION"></p></div>
+        </div>
+    </div>   
+    <script>
+        function loadImage() {
+            $("img[caption]").each(function () {
+                var img = $(this);
+                var table = $("#TABLE_TEMPLATE").clone().attr("id", "").show();
+                table.find("#LINK a img").attr("src", img.attr("src")).attr("alt", img.attr("caption")).attr("style", img.attr("style"));
+                table.find("#LINK a").attr("href", img.attr("src"));
+                table.find("#CAPTION").html(img.attr("caption"));
+                img.replaceWith(function () {
+                    return table;
+                })
+            });
+        }
+
 //            $("$LOAD li").each(function (){
 //                $(this).addClass("wow fadeInUp").attr("data-wow-duration","900ms").attr("data-wow-delay","100ms");
 //            });
-            </script>
-            <style>
-                #CAPTION{
-                        text-align: center;
-                        margin-bottom: 20px;
-                        color:#666666;
-                }
-                #CAPTION:hover{
-                       color:#555555;
-                }
-                #LINK {
-                        margin-bottom: 0px;
-                        border: none;
-                }
-                }
-            </style>
+    </script>
+    <style>
+        #CAPTION{
+            text-align: center;
+            margin-bottom: 20px;
+            color:#666666;
+        }
+        #CAPTION:hover{
+            color:#555555;
+        }
+        #LINK {
+            margin-bottom: 0px;
+            border: none;
+        }
+    </style>
 
 </html>
