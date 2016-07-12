@@ -1,0 +1,1 @@
+RewriteRule ^page/([a-zA-Z]+).html page.html?l=$1 [L]
