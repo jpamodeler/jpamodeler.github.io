@@ -88,8 +88,11 @@
 
         var secondaryLevel = topLevel + 1;
         var secondarySelector = 'h' + secondaryLevel;
+        
+        var thirdLevel = secondaryLevel + 1;
+        var thirdSelector = 'h' + thirdLevel;
 
-        return this.findOrFilter($scope, topSelector + ',' + secondarySelector);
+        return this.findOrFilter($scope, topSelector + ',' + secondarySelector + ',' + thirdSelector);
       },
 
       getNavLevel: function(el) {

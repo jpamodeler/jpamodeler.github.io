@@ -12,7 +12,7 @@
   // ================================
 
   var Sidebar = function (element, options) {
-      debugger;
+      
     this.$element      = $(element)
     this.options       = $.extend({}, Sidebar.DEFAULTS, options)
     this.transitioning = null
@@ -27,7 +27,7 @@
   }
 
   Sidebar.prototype.show = function () {
-      debugger;
+      
             var $handle = this.$element.data("$handle");
       $handle.find("span.icon-bar").hide();
       $handle.find("span.icon-close").show();
@@ -57,7 +57,7 @@
   }
 
   Sidebar.prototype.hide = function () {
-      debugger;
+      
       var $handle = this.$element.data("$handle");
       $handle.find("span.icon-bar").show();
       $handle.find("span.icon-close").hide();
@@ -87,14 +87,14 @@
   }
 
   Sidebar.prototype.toggle = function () {
-      debugger;
+      
     this[this.$element.hasClass('sidebar-open') ? 'hide' : 'show']()
   }
 
   var old = $.fn.sidebar
 
   $.fn.sidebar = function (option) {
-      debugger;
+      
     return this.each(function (){
       var $this = $(this)
       var data = $this.data('bs.sidebar')
@@ -114,7 +114,7 @@
   }
 
   $(document).on('click.bs.sidebar.data-api', '[data-toggle="sidebar"]', function (e) {
-      debugger;
+      
     var $this = $(this), href
     var target = $this.attr('data-target')
         || e.preventDefault()
@@ -128,7 +128,7 @@
   })
 
   $('html').on('click.bs.sidebar.autohide', function(event){
-      debugger;
+      
     var $this = $(event.target);
     var isButtonOrSidebar = $this.is('.sidebar, [data-toggle="sidebar"]') || $this.parents('.sidebar, [data-toggle="sidebar"]').length;
     if (isButtonOrSidebar) {

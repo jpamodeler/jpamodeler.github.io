@@ -66,12 +66,12 @@ jQuery(function($) {'use strict';
 		options = $.extend({}, options || {}, $this.data('countToOptions') || {});
 		$this.countTo(options);
 	}
-		
-	// Search
-	$('.fa-search').on('click', function() {
+
+        // Search
+	$('#header').on('click', 'form i.fa-search', function() {
 		$('.field-toggle').fadeToggle(200);
 	});
-
+        
 	// Contact form
 	var form = $('#main-contact-form');
 	form.submit(function(event){
