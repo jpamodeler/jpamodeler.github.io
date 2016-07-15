@@ -407,7 +407,7 @@ ul.sub-menu {
 **************************/
 
 #footer {
-     padding: 10px 0px; 
+    padding: 10px 0px; 
     /* background-image: url(../images/modeler/footer/footer.png); */
     /* background-repeat: repeat-x; */
     background-position: bottom;
@@ -2955,4 +2955,41 @@ span.stButton_gradient,
 /*Footer*/
 footer .social-icons a {
     float: right;
+}
+
+.IMG_CAPTION{
+    text-align: center;
+    margin-bottom: 20px;
+    color:#666666;
+}
+.IMG_CAPTION:hover{
+    color:#555555;
+}
+.IMG_CONTAINER {
+    margin-bottom: 0px;
+    border: none;
+}
+.IMG {
+    background: rgba(234, 233, 222, 0.21);
+    background-clip: padding-box;
+    border: 5px solid rgba(255,255,255,.2);
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(255,255,255,.1), /* Bright outer highlight */ 0 0 6px rgba(0, 0, 0, 0.4), /* Outer shadow */ 0px 0px 0 rgba(0,0,0,.5) inset, /* Inner shadow (top + left) */ 0px 0px 0 rgba(0,0,0,.5) inset;
+    padding: 2px 2px 2px 2px;
+}
+
+.IMG_THIN {
+    background: rgba(234, 233, 222, 0.21);
+    background-clip: padding-box;
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(255,255,255,.1), /* Bright outer highlight */ 0 0 6px rgba(0, 0, 0, 0.4), /* Outer shadow */ 0px 0px 0 rgba(0,0,0,.5) inset, /* Inner shadow (top + left) */ 0px 0px 0 rgba(0,0,0,.5) inset;
+    padding: 2px 2px 2px 2px;
+}
+
+.testimonial-text{
+    font-size:14px
+}
+.testimonial-atuhor {
+    font-weight: bold;
 }
