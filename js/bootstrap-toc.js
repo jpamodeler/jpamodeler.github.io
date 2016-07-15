@@ -62,9 +62,9 @@
         var $headingText = $heading.text();
         if($headingText){
             var $headingTextLength = $headingText.length;
-            if($headingText.substring($headingTextLength-2) == " :"){
-                $headingText = $headingText.substring(0,$headingTextLength-2);
-            }
+            if($headingText.substring($headingTextLength-1) == ":"){
+                $headingText = $headingText.substring(0,$headingTextLength-1);
+            } 
         }
         var text = $heading.data('toc-text') || $headingText;
         return $('<li><a href="#' + anchor + '">' + text + '</a></li>');

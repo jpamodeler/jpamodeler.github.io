@@ -2981,7 +2981,7 @@ footer .social-icons a {
 .IMG_THIN {
     background: rgba(234, 233, 222, 0.21);
     background-clip: padding-box;
-    border: 2px solid rgba(255,255,255,.2);
+    border: 1px solid rgba(255,255,255,.2);
     border-radius: 3px;
     box-shadow: 0 0 2px rgba(255,255,255,.1), /* Bright outer highlight */ 0 0 6px rgba(0, 0, 0, 0.4), /* Outer shadow */ 0px 0px 0 rgba(0,0,0,.5) inset, /* Inner shadow (top + left) */ 0px 0px 0 rgba(0,0,0,.5) inset;
     padding: 2px 2px 2px 2px;
