@@ -8,12 +8,12 @@
         var url = "https://github.com/jGauravGupta/JPAModeler/releases/tag/";
         var data = {
             NETBEANS: [
-                {url: "<URL1>", version: 1.4, nb_version: 8.1},
-                {url: "<URL2>", version: 1.4, nb_version: 8.2}
+                {version: 1.9, nb_version: 8.1, url: "https://github.com/jGauravGupta/JPAModeler/releases/download/1.9/JPA.Modeler.v1.9.NBv8.1.zip"},
+//                {url: "<URL2>", version: 1.4, nb_version: 8.2}
             ],
-            WINDOWS: {url: "<>", version: 1.4},
-            LINUX: {url: "<>", version: 1.4},
-            OSX: {url: "<>", version: 1.4}
+//            WINDOWS: {url: "<>", version: 1.4},
+//            LINUX: {url: "<>", version: 1.4},
+//            OSX: {url: "<>", version: 1.4}
         };
         loadVersion(data);
     });
@@ -36,10 +36,19 @@
 
         $(".OS").each(function () {
             var OS_Data = data[$(this).attr("id")];
+            if(OS_Data==undefined){
+                $(this).hide();
+            } else {
             var download = $(this).find(".download");
             download.attr("href", OS_Data.url);
             download.text("Download v" + OS_Data.version);
-        })
+        }
+        });
+        
+        if($(".OS:visible").size()==0){
+            $("#OS_DOWNLOAD .container .row div:nth-child(1)").hide();
+        }
+
 
         $("#NBM_DETAILS").on("change", function () {
             var option = $(this).find(":selected");
@@ -64,11 +73,16 @@
                 <a id="NBM_DOWNLOAD" href="#" class="btn btn-buynow download">Download</a>
             </div>
         </div>
+        <div class="row">
+            <div class="col-sm-10 text-center pull-right">
+               <a href="page.html?l=tutorial/Installation" class="btn btn-link" target="_blank">Installation Instructions</a>
+            </div>
+        </div>
     </div>
 </section>
 <!--/#about-company-->
 
-<section>
+<section id="OS_DOWNLOAD">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center wow fadeIn" data-wow-duration="1000ms" data-wow-delay="100ms">
@@ -111,3 +125,6 @@
 </section>
 <!--/#services-->
 <script>removeSidebar();</script>
+
+<script>paginate( "page.html?l=tutorial/Requirement", "page.html?l=tutorial/Installation");
+</script>
