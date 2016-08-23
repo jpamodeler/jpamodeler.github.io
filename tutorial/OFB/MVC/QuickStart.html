@@ -86,19 +86,6 @@ To create an IDE project:
         <img src="tutorial/OFB/MVC/QuickStart/PROJECT_SETUP2.png" caption="choose Project" />
     </li>
     <li>Click Finish.</li>
-    <li>The project is created and opened in the IDE. Now, add the maven dependency of Ozark in <b>pom.xml</b>.
-        <img src="tutorial/OFB/MVC/QuickStart/POM.png" caption="add dependencies in pom.xml" />
-        <script src="https://gist.github.com/jGauravGupta/b26ba5ed8e6fc28bbc6fbc9a3320cdfe.js"></script>
-    </li>
-    <li>Right click on the project node > <b>Build with Dependencies</b>.
-        <img src="tutorial/OFB/MVC/QuickStart/BUILD_DEPENDENCY.png" caption="" />
-    </li>
-    <li>
-        Now, You should see the Projects window, which contains a tree view of the components of the project, 
-        libraries that your code depends on, and so on.
-        <img src="tutorial/OFB/MVC/QuickStart/PROJECT_STRUCT.png" caption="Project structue" />
-        That's all what is needed to set up the project. You are now ready to use new MVC framework with Java EE!
-    </li>
 </ul>
 
 
@@ -292,10 +279,22 @@ Java source structure of this project seems like below.
 the Customer Entity.-->
 <h3 id="DEP">Deploy :</h3>
 <ul>
-    <li>Clean and build your project. 
-        <img src="tutorial/OFB/MVC/QuickStart/CLEAN_BUILD.png" caption="" />
+     <li>The source code is generated. Now, check the maven dependency of Ozark in <b>pom.xml</b>.
+        <img src="tutorial/OFB/MVC/QuickStart/POM.png" caption="add dependencies in pom.xml" />
+        <script src="https://gist.github.com/jGauravGupta/b26ba5ed8e6fc28bbc6fbc9a3320cdfe.js"></script>
     </li>
-    <li>Now we are ready to run application. Right-Click on project > Run :
+    <li>Right click on the project node > <b>Build with Dependencies</b>.
+        <img src="tutorial/OFB/MVC/QuickStart/BUILD_DEPENDENCY.png" caption="" />
+    </li>
+    <li>
+        Now, You should see the Projects window, which contains a tree view of the components of the project, 
+        libraries that your code depends on, and so on.
+        <img src="tutorial/OFB/MVC/QuickStart/PROJECT_STRUCT.png" caption="Project structue" />
+        <p>
+        That's all what is needed to set up the project. You are now ready to use new MVC framework with Java EE!
+        </p>
+    </li>
+    <li>Now right click on project > Run :
         <img src="tutorial/OFB/MVC/QuickStart/RUN.png" caption="Deploying Project..." />
     </li>
 </ul>
