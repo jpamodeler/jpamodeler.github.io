@@ -8,6 +8,11 @@ embeddable {
     padding: 2px 12px 2px 18px;
 }
 
+mapped-superclass {
+    background: url("../Icons/class/MAPPED_SUPER_CLASS.png") no-repeat;
+    padding: 2px 8px 2px 18px;
+}
+
 add-attr {
       background: url("../Icons/button/add-element.png") no-repeat;
       padding: 2px 12px 2px 8px;
@@ -32,6 +37,10 @@ basic-element-collection {
     background: url("../Icons/attribute/basic-collection-attribute.png") no-repeat;
     padding: 0px 12px 0px 12px;
 }
+inheritance {
+    background: url("../Icons/relation/generalization.png") no-repeat;
+    padding: 0px 10px 0px 8px;
+}    
 
 embedded {
     background: url("../Icons/attribute/single-value-embedded.gif") no-repeat;
