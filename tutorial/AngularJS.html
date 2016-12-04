@@ -43,17 +43,17 @@ To create an IDE project:
 <ul>
     <li>Start NetBeans IDE.</li>
     <li>In the IDE, choose <b>File > New Project(Ctrl-Shift-N)</b> from the main menu, as shown in the figure below :
-        <img src="tutorial/OFB/MVC/QuickStart/1.png" caption="create New Project" />
+        <img src="tutorial/JavaEE_MVC/1.png" caption="create New Project" />
     </li>
     <li>In the New Project wizard, expand the <b>Maven</b> category and select <b>Web Application</b> as shown in the figure below. Then click Next.
-        <img src="tutorial/OFB/MVC/QuickStart/PROJECT_CAT.png" caption="choose Project" />
+        <img src="tutorial/JavaEE_MVC/PROJECT_CAT.png" caption="choose Project" />
     </li>
     <li>Enter <b>ShoppingSystem</b> in the Project name text box and specify the Project Location to any directory on your computer and click next (as shown in the figure below):
         <img src="tutorial/AngularJS/PROJECT_SETUP1.png" caption="choose Name and Location" />
     </li>
     <li>Select the version of Java EE you want to use with your application and 
         the server to which you want to deploy your application.
-        <img src="tutorial/OFB/MVC/QuickStart/PROJECT_SETUP2.png" caption="choose Project" />
+        <img src="tutorial/JavaEE_MVC/PROJECT_SETUP2.png" caption="choose Project" />
     </li>
     <li>Click Finish.</li>
 </ul>
@@ -62,17 +62,17 @@ To create an IDE project:
 <h3 id="CD">Create the JPA Diagram :</h3>
 <ol style="text-align: left;">
     <li>Goto <b>File</b> menu <b>&gt; New File &gt; Persistence</b> category.
-        <img src="tutorial/OFB/MVC/QuickStart/8.png" caption="create New File" />
+        <img src="tutorial/JavaEE_MVC/8.png" caption="create New File" />
     </li>
     <li>From the Persistence , select <b>JPA Diagram</b> and click <b>Next</b>.
-        <img src="tutorial/OFB/MVC/QuickStart/JPAM_CAT.png" caption="Select JPA Diagram" />
+        <img src="tutorial/JavaEE_MVC/JPAM_CAT.png" caption="Select JPA Diagram" />
     </li>
     <li>Type <b>CartModel</b> for the diagram name and <b>Browse</b> the location in project.
-        <img src="tutorial/OFB/MVC/QuickStart/JPAM_SETUP.png" caption="enter Dagram name" />
+        <img src="tutorial/JavaEE_MVC/JPAM_SETUP.png" caption="enter Dagram name" />
     </li>
     <li>Click <b>Finish</b>.</li>
     <li>When you click Finish, the IDE creates the JPA Diagram and opens the diagram in the designer window.
-        <img src="tutorial/OFB/MVC/QuickStart/DIA_OPEN.png" caption="Diagram opened" />
+        <img src="tutorial/JavaEE_MVC/DIA_OPEN.png" caption="Diagram opened" />
     </li>
 </ol>
 
@@ -80,10 +80,10 @@ To create an IDE project:
 <ol style="text-align: left;">
     <li>Drag &amp; Drop the <b>Entity</b> <entity></entity> from the Palette window to designer. 
     <img src="tutorial/NamedEntityGraph/pal.JPG" caption="Palette" />
-    <img src="tutorial/OFB/MVC/QuickStart/DRAG_ENTITY.png" caption="drag Entity" />
+    <img src="tutorial/JavaEE_MVC/DRAG_ENTITY.png" caption="drag Entity" />
 </li>
 <li>Double click on the Entity <entity></entity> and rename to <b>Customer</b>.
-<img src="tutorial/OFB/MVC/QuickStart/RENAME_ENTITY.png" caption="rename Entity" />
+<img src="tutorial/JavaEE_MVC/RENAME_ENTITY.png" caption="rename Entity" />
 </li>
 </ol>
 
@@ -92,16 +92,16 @@ To create an IDE project:
 
     <li>To create <b><code>@Basic</code> attribute</b>, click on the <b>Customer Entity </b> <entity></entity> , 
     then click on the expand <add-attr></add-attr>  button &gt; basic <basic></basic> property.
-    <img src="tutorial/OFB/MVC/QuickStart/BASIC_ATTR.png" caption="add @Basic" />
+    <img src="tutorial/JavaEE_MVC/BASIC_ATTR.png" caption="add @Basic" />
 </li>
 <!--<li>
     Validation annotations like <b>@Size, @NotNull</b> and so on can be added to the respective entity fields by using 
     <b>JPA Modeler Diagram > property panel > bean validation</b>. 
     As shown below :
-    <img src="tutorial/OFB/MVC/QuickStart/BV.png" caption="Bean Validation" />
+    <img src="tutorial/JavaEE_MVC/BV.png" caption="Bean Validation" />
 </li>-->
 <li>Same as above create some other entities and properties (for more information <a href="page.html?l=tutorial/QuickStart" target="_blank">click here</a>).
-    <img src="tutorial/OFB/MVC/QuickStart/FINAL_DIA.png" caption="Final Diagram" />
+    <img src="tutorial/JavaEE_MVC/FINAL_DIA.png" caption="Final Diagram" />
 </li>
 </ol>
 
@@ -128,11 +128,11 @@ To create an IDE project:
 <h3 id="GEN">Generate the entity classes :</h3>
 <ul style="text-align: left;">
     <li>Right click on the <b>diagram &gt; Generate Source Code</b> or <b>(ctrl + G)</b>
-        <img src="tutorial/OFB/MVC/QuickStart/GEN_SRC.png" caption="Generate Source Code" />
+        <img src="tutorial/JavaEE_MVC/GEN_SRC.png" caption="Generate Source Code" />
     </li>
     <li><h4 id="BU">Business Service :</h4>
         Click on the <b>Business Service &gt; select Session Facade</b>.
-        <img src="tutorial/OFB/MVC/QuickStart/BUSINESS_SERVICE.png" caption="" />
+        <img src="tutorial/JavaEE_MVC/BUSINESS_SERVICE.png" caption="" />
 
         In the following screen, you can configure the <b>SessionBean package</b> and <b>class name pattern</b> for the EJB facade 
         that will be created for your application:
@@ -148,23 +148,14 @@ To create an IDE project:
         that will be created for your application:
         <img src="tutorial/AngularJS/REST.png" caption="configure package and class name pattern" />
 
-<!--
-        <h5>Bean Validation :</h5>
-
-        Handling form validations in MVC 1.0 is pretty simple. Using the following option NetBeans will add the <code>javax.mvc.binding.BindingResult</code> class 
-        (which has to be used to handle validation errors) as a property in the controller class
-        and add error handling to the controller method by using the injected <b>BindingResult</b> reference.
-
-        <img src="tutorial/OFB/MVC/QuickStart/BV2.png" caption="" />-->
-
 
         <h5>Configure the application:</h5>
         To create our REST application we also need a JAX-RS Application class:
         The subclass of <code>javax.ws.rs.core.Application</code> can be used to define additional JAX-RS components.
         In the following screen, you can configuration <code>@ApplicationPath</code> 
         (that define the base path for our application) and class name.
-        <img src="tutorial/OFB/MVC/QuickStart/APP_CONG_ACTION.png" caption="click here to update application config" />
-        <img src="tutorial/OFB/MVC/QuickStart/ApplicationConfig.png" caption="configure application path" />
+        <img src="tutorial/JavaEE_MVC/APP_CONG_ACTION.png" caption="click here to update application config" />
+        <img src="tutorial/JavaEE_MVC/ApplicationConfig.png" caption="configure application path" />
     </li>
     <li>
         <h4 id="VI">Viewer :</h4>
@@ -194,10 +185,10 @@ the Customer Entity.-->
 <ul>
     
     <li>Right click on the project node > <b>Build with Dependencies</b>.
-        <img src="tutorial/OFB/MVC/QuickStart/BUILD_DEPENDENCY.png" caption="" />
+        <img src="tutorial/JavaEE_MVC/BUILD_DEPENDENCY.png" caption="" />
     </li>
     <li>Now right click on project > <b>Run</b> :
-        <img src="tutorial/OFB/MVC/QuickStart/RUN.png" caption="Deploying Project..." />
+        <img src="tutorial/JavaEE_MVC/RUN.png" caption="Deploying Project..." />
     </li>
 </ul>
 
