@@ -78,13 +78,13 @@ Make sure that the following prerequisites are met:
 <ul>
     <li>Right click on the <b>diagram &gt; Generate Source Code</b> or <b>(ctrl + G)</b></li>
     <li>Select the technology component e.g REST, Angular etc</li>
-    <img src="tutorial/Docker/GENERATE_SRC.gif" caption="create New Project" />
+    <img src="tutorial/Docker/GENERATE_SRC.gif" caption="Generate source code" />
 </ul>
 
 
 <h3>Define Infrastructure :</h3>
 <ul>
-    <li> Select docker instance or add new instance</li>
+    <li>Select docker instance or add new instance</li>
     <li>Select the server to which you want to deploy your application and the database to persist data so that the generated docker-compose.yml
         defines two services: <b>web</b> and <b>db</b>. The container for the web service is built according to the DockerFile located in the same directory.
         The container port 8080 is mapped to the host port 8080. The service is linked to a container in the db service. 
