@@ -5,26 +5,13 @@
 </style>
 <script>
     $(document).ready(function () {
-        var data = {
-            NETBEANS: [
-                
-             {version: "2.8", nb_version: 8.2, url: "http://plugins.netbeans.org/download/plugin/8885"},
-//             {version: "2.7", nb_version: 8.2, url: "http://plugins.netbeans.org/download/plugin/8831"},
-//             {version: "2.6.9", nb_version: 8.2, url: "http://plugins.netbeans.org/download/plugin/8825"},
-             {version: "2.6", nb_version: 8.1, url: "http://plugins.netbeans.org/download/plugin/8638"}
-//                {version: "2.5.10", nb_version: "8.2 RC", url: "http://plugins.netbeans.org/download/plugin/8520"},
-//                {url: "<URL2>", version: 1.4, nb_version: 8.2}
-            ],
-//            WINDOWS: {url: "<>", version: 1.4},
-//            LINUX: {url: "<>", version: 1.4},
-//            OSX: {url: "<>", version: 1.4}
-        };
-        loadVersion(data);
-    });
+            $.getJSON( "release.json", function( data ) { 
+                loadVersion(data);
+            });
+        });
 
 
     function loadVersion(data) {
-        debugger;
         for (var i in data.NETBEANS) {
             var netbeansIns = data.NETBEANS[i];
             if (i == 0) {
