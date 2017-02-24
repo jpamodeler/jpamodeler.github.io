@@ -1,5 +1,10 @@
 {
-    "NETBEANS": [   
+    "NETBEANS": [ 
+        {
+            "version": "3.3",
+            "nb_version": 8.2,
+            "url": "http://plugins.netbeans.org/download/plugin/9002"
+        },
         {
             "version": "3.2.2",
             "nb_version": 8.2,
