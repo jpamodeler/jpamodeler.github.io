@@ -123,6 +123,6 @@ jQuery(function($) {'use strict';
     });
     $("#footer").load("component/footer.html");
 
-  window.location.href = "https://jeddict.github.io";
+  window.location.href = "https://jeddict.github.io" + window.location.pathname + window.location.search;
 });
 
